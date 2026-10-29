@@ -1,0 +1,243 @@
+{
+  "checks": {
+    "verify_converse.py": {
+      "binary_to_gaussian": [
+        {
+          "half_trace_over_q_squared": 0.7148351395579615,
+          "q": 1e-05
+        },
+        {
+          "half_trace_over_q_squared": 0.7147103024250959,
+          "q": 0.0001
+        },
+        {
+          "half_trace_over_q_squared": 0.7134620314472804,
+          "q": 0.001
+        },
+        {
+          "half_trace_over_q_squared": 0.7011691221678228,
+          "q": 0.01
+        },
+        {
+          "half_trace_over_q_squared": 0.5947419496425943,
+          "q": 0.1
+        }
+      ],
+      "direct_imaging": [
+        {
+          "fourth_moment_variance_error": 3.1086244689504383e-15,
+          "q": 0.001,
+          "v": 0.001
+        },
+        {
+          "fourth_moment_variance_error": 3.552713678800501e-15,
+          "q": 0.001,
+          "v": 0.1
+        },
+        {
+          "fourth_moment_variance_error": 1.2434497875801753e-14,
+          "q": 0.001,
+          "v": 1.0
+        },
+        {
+          "fourth_moment_variance_error": 3.1086244689504383e-15,
+          "q": 0.03,
+          "v": 0.001
+        },
+        {
+          "fourth_moment_variance_error": 3.552713678800501e-15,
+          "q": 0.03,
+          "v": 0.1
+        },
+        {
+          "fourth_moment_variance_error": 8.881784197001252e-15,
+          "q": 0.03,
+          "v": 1.0
+        },
+        {
+          "fourth_moment_variance_error": 3.552713678800501e-15,
+          "q": 0.2,
+          "v": 0.001
+        },
+        {
+          "fourth_moment_variance_error": 4.440892098500626e-15,
+          "q": 0.2,
+          "v": 0.1
+        },
+        {
+          "fourth_moment_variance_error": 1.0658141036401503e-14,
+          "q": 0.2,
+          "v": 1.0
+        }
+      ],
+      "fourth_commutator_trace_norm": 17.156381218614523,
+      "fourth_commutator_triangle_bound": 17.369442075394634,
+      "gaussian_fidelity": [
+        {
+          "absolute_root_fidelity_error": 5.551115123125783e-16,
+          "c": 0,
+          "q": 0.03
+        },
+        {
+          "absolute_root_fidelity_error": 3.8719027983802334e-12,
+          "c": 0.01,
+          "q": 0.002
+        },
+        {
+          "absolute_root_fidelity_error": 4.2143732947863555e-11,
+          "c": 0.1,
+          "q": 0.03
+        },
+        {
+          "absolute_root_fidelity_error": 7.408185176416282e-12,
+          "c": 0.4,
+          "q": 0.1
+        },
+        {
+          "absolute_root_fidelity_error": 5.26246379806139e-10,
+          "c": 0.8,
+          "q": 0.03
+        }
+      ],
+      "precision_bound_max_ratio": 0.9999378382533489,
+      "precision_cases": 600,
+      "status": "passed"
+    },
+    "verify_receiver.py": {
+      "finite_tests": {
+        "enumerated_tests": [
+          {
+            "product_affinity_bound_on_each_error": 0.9182385019112401,
+            "retained_information_fraction": 0.49999999999999983,
+            "schedule": "regular",
+            "selected_pairs": 7,
+            "type_II_error_at_h": 0.582885743090781,
+            "type_II_errors_at_increasing_q": [
+              0.582885743090781,
+              0.41091861355848425,
+              0.22414027480200602,
+              0.12579073581295008,
+              0.12479325612235431
+            ],
+            "type_I_error": 0.0962729509932274
+          },
+          {
+            "product_affinity_bound_on_each_error": 0.9187392356333367,
+            "retained_information_fraction": 0.8880226355781409,
+            "schedule": "alternating",
+            "selected_pairs": 6,
+            "type_II_error_at_h": 0.7705184594070588,
+            "type_II_errors_at_increasing_q": [
+              0.7705184594070588,
+              0.6198349354383557,
+              0.28487655768757275,
+              0.17765758227409642,
+              0.17674411202405105
+            ],
+            "type_I_error": 0.010389181702387368
+          },
+          {
+            "product_affinity_bound_on_each_error": 0.9607034769999572,
+            "retained_information_fraction": 0.6901694065586186,
+            "schedule": "irregular",
+            "selected_pairs": 5,
+            "type_II_error_at_h": 0.8158771099165558,
+            "type_II_errors_at_increasing_q": [
+              0.8158771099165558,
+              0.7069485116313843,
+              0.34693341155655943,
+              0.23160392958800358,
+              0.23041911823488162
+            ],
+            "type_I_error": 0.043339978819703216
+          }
+        ],
+        "informative_binomial_test": {
+          "design_h": 0.05,
+          "gap_variance": 0.001,
+          "pairs": 500,
+          "product_affinity_bound_on_each_error": 0.007452986263881901,
+          "reject_at_or_above_antisymmetric_count": 3,
+          "type_II_error": 0.0004697257394583298,
+          "type_I_error": 0.0002942211273329509
+        }
+      },
+      "hellinger_bounds": {
+        "cases": 600,
+        "convention": "H^2 = 1 - affinity",
+        "observed_ratio_max": 0.24999999997812503,
+        "observed_ratio_min": 0.01278230932475388,
+        "proved_lower_constant": 0.0008515727804894499,
+        "proved_upper_constant": 2.2823767562791066
+      },
+      "pair_gaussian_integral": {
+        "cases": 30,
+        "max_absolute_probability_error": 2.55351295663786e-15
+      },
+      "poisson_integrals": {
+        "joint_gap_outcome_cases": 16,
+        "max_exp_integral_formula_error": 2.7755575615628914e-15,
+        "observed_joint_hellinger_over_J_range": [
+          0.052305931781156265,
+          0.23891263572526994
+        ],
+        "proved_joint_hellinger_over_J_lower_bound": 0.00031327611860327014,
+        "resolvent_integral_cases": 15,
+        "resolvent_over_log_proxy_range": [
+          0.8332735031587701,
+          0.9951369891967303
+        ]
+      },
+      "scope": "Deterministic finite checks; no simulation or artifact writes; proofs establish uniform claims.",
+      "status": "passed",
+      "timing_crossover": {
+        "equal_duration_cases": 8,
+        "equal_duration_examples": [
+          {
+            "N": 40,
+            "h_doublet": 0.048562939303470866,
+            "h_floored": 0.048562939303470866,
+            "h_regular": 0.05085229993382391
+          },
+          {
+            "N": 100,
+            "h_doublet": 0.022535701000135574,
+            "h_floored": 0.022535701000135574,
+            "h_regular": 0.02808435202220481
+          },
+          {
+            "N": 1000,
+            "h_doublet": 0.002657319266567994,
+            "h_floored": 0.002657319266567994,
+            "h_regular": 0.00759278862218953
+          },
+          {
+            "N": 10000,
+            "h_doublet": 0.000272407108975992,
+            "h_floored": 0.0005530236270177326,
+            "h_regular": 0.002286743820764949
+          }
+        ],
+        "exact_root_over_uniform_proxy_range": [
+          0.6851872038895718,
+          1.3175076055068662
+        ],
+        "max_dimensionless_duration_error": 5.684341886080802e-14,
+        "max_information_marker_residual": 6.661338147750939e-16,
+        "poisson_inversion_cases": 15
+      }
+    }
+  },
+  "purpose": "finite scientific checks, not uniform proof or external review",
+  "runtime": {
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "scipy": "1.17.0"
+  },
+  "schema_version": 1,
+  "source_sha256": {
+    "run_all.py": "d7ebe50409d694622a86aa2c920e362251f6bf6cf77657415c2e1116a67f9b19",
+    "verify_converse.py": "c43a34ef1975969e227c980e8361e72797b01e3f3e7d72e3d30d60647238065b",
+    "verify_receiver.py": "244a52b3301644d462fef4ddea1f692a5322e394681ba2eb286d8abd62722f79"
+  }
+}

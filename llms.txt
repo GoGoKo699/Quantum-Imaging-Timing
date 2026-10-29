@@ -1,0 +1,22 @@
+# Quantum Imaging Timing
+
+> Optimal schedule-dependent one-versus-two-source testing for timestamped photon spatial registers with a Brownian common centroid.
+
+## Scientific routes
+
+- [Overview](README.md): main timing functional, resource conventions and scope.
+- [Connected scientific route](science/README.md): proof dependencies and physical interpretation.
+- [Model and exact theorem](science/model-and-theorem.md): q=s²/(8σ²), v_i=DΔt_i/σ², unknown initial centroid, known diffusion, full correlated quantum record and fixed-error minimax risk.
+- [Collective converse](science/collective-converse.md): trace-distance Gaussian replacement, squared fidelity convention, Brownian precision and schedule-uniform lower bound.
+- [Pair receiver](science/receiver.md): SWAP statistics, parity matching, outcome independence and monotone composite testing.
+- [Timing resources](science/timing-regimes.md): periodic, fixed-duration and close-doublet schedules, equal count/duration comparisons and hard timing floors.
+- [Poisson experiment](science/poisson-arrivals.md): fixed photon-count stopping, exact observed gaps, random-schedule risk and ideal short-gap logarithm.
+- [Direct imaging](science/direct-imaging.md): every processing rule for the complete detected-position record versus an attaining pair-difference statistic.
+- [Optical access assumptions](science/physical-interface.md): independently addressable one-photon registers, storage, routing and nonspatial mode matching.
+- [Related work](references/related-work.md): closest primary sources, inherited results and scope of the comparison.
+- [Structured bibliography](references/references.bib).
+- [Reproduction](verification/README.md): commands, finite outputs, figure provenance and verification limits.
+
+## Distinctions to retain
+
+The timing functional is an operational testing scale, not a local Fisher information. The Brownian state is correlated and is not replaced by independent time-averaged one-photon marginals in the theorem. The nuisance prior is used only in a minimax lower bound. The pair matching may depend on the known schedule and design threshold, never on an unknown separation. Fixed mean flux and fixed total duration are different asymptotic experiments. A schedule change is not a receiver improvement on the same stream. The Poisson short-gap idealization is not a full finite-bandwidth optical-field theorem. Finite numerical checks corroborate the written analytical arguments; they do not establish uniformity or priority.
