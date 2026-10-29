@@ -60,6 +60,12 @@ Start with the [scientific reading route](science/README.md), or go directly to 
 
 The Brownian crossover exponents and static two-photon interference receivers have prior precedents. The contribution developed here is the schedule-dependent characterization for the correlated record, its converse against all collective receivers, and adjacent-pair sufficiency. The related-work account gives the source-level comparison and its limits.
 
+## Learn the project
+
+The learning route starts from Mankei Tsang’s *Resolving starlight: a quantum perspective*. The [source-to-project bridge](learning/TSANG_BRIDGE.md) identifies the relevant sections, translates notation and assumptions, and works through a photon-pair example before introducing the additional tools needed for correlated motion.
+
+The [30-milestone map](learning/MILESTONES.md) develops the project in two connected phases: 12 background milestones followed by 18 milestones through the receiver, collective converse and timing consequences. Use the [learning guide](learning/README.md) to choose an entry point and connect each milestone to the authoritative scientific account.
+
 ## Reproduce the checks
 
 From the repository root:

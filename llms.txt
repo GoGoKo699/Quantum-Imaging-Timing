@@ -17,6 +17,12 @@
 - [Structured bibliography](references/references.bib).
 - [Reproduction](verification/README.md): commands, finite outputs, figure provenance and verification limits.
 
+## Learning route
+
+- [Learning guide](learning/README.md): entry points and the connection between the source, milestone map and scientific route.
+- [Tsang source-to-project bridge](learning/TSANG_BRIDGE.md): the selected anchor, Resolving starlight: a quantum perspective; verified section pointers, notation and assumption mapping, a worked pair example and the local proof tools the source does not supply.
+- [Thirty milestones](learning/MILESTONES.md): 12 background milestones followed by 18 milestones connecting the pair receiver, collective converse, timing resources and physical interface. Each milestone has a question, understanding target, dependencies, conceptual connection and reading pointers.
+
 ## Distinctions to retain
 
 The timing functional is an operational testing scale, not a local Fisher information. The Brownian state is correlated and is not replaced by independent time-averaged one-photon marginals in the theorem. The nuisance prior is used only in a minimax lower bound. The pair matching may depend on the known schedule and design threshold, never on an unknown separation. Fixed mean flux and fixed total duration are different asymptotic experiments. A schedule change is not a receiver improvement on the same stream. The Poisson short-gap idealization is not a full finite-bandwidth optical-field theorem. Finite numerical checks corroborate the written analytical arguments; they do not establish uniformity or priority.
