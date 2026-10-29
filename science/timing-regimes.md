@@ -157,7 +157,7 @@ The regular/doublet exponent contrast in the preceding section therefore require
 Suppose the supplied schedule must satisfy fixed positive bounds
 
 ```math
-0<v_{\min}\le v_i\le V<\infty.
+0\lt v_{\min}\le v_i\le V\lt \infty.
 ```
 
 Then
@@ -172,7 +172,7 @@ For large $`N`$, these force $`h_{\rm res}=\Theta(N^{-1/2})`$ and $`s_{\rm res}/
 For the doublet family, imposing the floor by setting
 
 ```math
-u_N=\max\{b/N,v_{\min}\},\qquad 0<v_{\min}<\kappa,
+u_N=\max\{b/N,v_{\min}\},\qquad 0\lt v_{\min}\lt \kappa,
 ```
 
 and choosing $`w_N`$ from the same exact-duration equation preserves the comparison. The shrinking-gap regime ends near $`N=b/v_{\min}`$. Beyond it the internal gaps are fixed, and the asymptotic separation order returns to $`N^{-1/4}`$.

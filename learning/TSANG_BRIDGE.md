@@ -219,7 +219,7 @@ For $`M`$ independent zero-motion pairs, an any-antisymmetric-event decision has
 For $`v>0`$,
 
 ```math
-p_v(0)=\frac{1-(1+v)^{-1/2}}2>0,
+p_v(0)=\frac{1-(1+v)^{-1/2}}2\gt 0,
 ```
 
 and, at fixed $`v`$ as $`q\to0`$,
