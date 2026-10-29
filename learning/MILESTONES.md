@@ -289,7 +289,7 @@ An **anchor context** pointer identifies an entry into an idea, without attribut
 
 **Central question:** How can a global covariance bound be expressed using individual arrival gaps?
 
-**Understanding target:** Explain the cumulative-sum covariance and the first-difference precision matrix. Identify how rank-one inverse updates control $`\operatorname{tr}(C+hI)^{-1}`$ by a sum of regularized inverse increments, and why this step is uniform over uneven positive gaps.
+**Understanding target:** Explain the cumulative-sum covariance and the first-difference precision matrix. Identify how rank-one inverse updates control $`\mathrm{tr}(C+hI)^{-1}`$ by a sum of regularized inverse increments, and why this step is uniform over uneven positive gaps.
 
 **Dependencies and story role:** Requires M07 and M19. Connects the converse's global spectral quantity to the same local timing weights already found by the pair receiver.
 

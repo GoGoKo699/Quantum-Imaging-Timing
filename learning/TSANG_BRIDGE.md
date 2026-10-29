@@ -134,7 +134,7 @@ The expectation is **outside** the tensor product. For example, with the initial
 
 ```math
 B_2=W_2,\qquad B_3=W_2+W_3,\qquad
-\operatorname{Cov}(B_2,B_3)=v_2.
+\mathrm{Cov}(B_2,B_3)=v_2.
 ```
 
 Replacing the joint state by $`\bigotimes_i\mathbb E_W\omega_{q,m+B_i}`$ removes that correlation. The one-photon marginals do not determine the joint experiment. The actual joint state is a classical mixture of product states, so entanglement in the input is not needed for this temporal correlation.
@@ -158,8 +158,8 @@ Thus an information quantity that is singular in $`q`$ near zero can correspond 
 The project's operational question is whether one measurement effect $`0\le E\le I`$ can keep both
 
 ```math
-\alpha=\sup_m\operatorname{tr}(E\rho^v_{0,m}),\qquad
-\beta_h=\sup_{m,\ q\ge h}\operatorname{tr}[(I-E)\rho^v_{q,m}]
+\alpha=\sup_m\mathrm{tr}(E\rho^v_{0,m}),\qquad
+\beta_h=\sup_{m,\ q\ge h}\mathrm{tr}[(I-E)\rho^v_{q,m}]
 ```
 
 below a chosen error level. The threshold $`h`$ is fixed when designing the receiver; the true $`q`$ is unknown. Resolution means the smallest order of $`s_h=\sqrt{8h}\,\sigma`$ for which this is possible. No unbiased estimator is required.
@@ -208,7 +208,7 @@ p_0(q)=\frac{1-e^{-2q}}4=\frac q2+O(q^2).
 The subscript denotes motion variance; the argument denotes squared separation. The single-source null therefore produces **no antisymmetric event**, even for an unknown centroid. The pair Hellinger distance is
 
 ```math
-H^2(\operatorname{Ber}(0),\operatorname{Ber}(p_0(q)))
+H^2(\mathrm{Ber}(0),\mathrm{Ber}(p_0(q)))
 =1-\sqrt{1-p_0(q)}=\frac q4+O(q^2).
 ```
 
@@ -230,7 +230,7 @@ p_v(q)-p_v(0)
 ```
 
 ```math
-H^2(\operatorname{Ber}(p_v(0)),\operatorname{Ber}(p_v(q)))
+H^2(\mathrm{Ber}(p_v(0)),\mathrm{Ber}(p_v(q)))
 =\frac{q^2}{8v(1+v)^2}+O(q^3).
 ```
 

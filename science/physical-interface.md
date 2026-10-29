@@ -18,7 +18,7 @@ In physical image-plane coordinates, the known point-spread amplitude is
 Its intensity has variance $\sigma^2$. The real amplitude, including its phase convention, is part of the model. The two equally bright incoherent emitters have fixed separation $s$ along a known axis. Their common centroid is $C(t)=m+B(t)$, where $m$ is an unknown fixed initial position and $B$ is Brownian motion with
 
 ```math
-\operatorname{Var}[B(t)-B(u)]=2D|t-u|.
+\mathrm{Var}[B(t)-B(u)]=2D|t-u|.
 ```
 
 The diffusion coefficient $D$ is known. Conditional on the trajectory, the source choice for each photon is an independent fair sign. Thus
@@ -56,7 +56,7 @@ Both effects commute with a common translation of the two inputs. The measuremen
 For a pair with gap variance $v$, averaging over its Brownian increment gives
 
 ```math
-K(q,v):=\mathbb E\operatorname{Tr}(\rho_{s,C_1}\rho_{s,C_2})
+K(q,v):=\mathbb E\mathrm{Tr}(\rho_{s,C_1}\rho_{s,C_2})
 =\frac{1+e^{-2q/(1+v)}}{2\sqrt{1+v}},
 \qquad
 p_-(q,v)=\frac{1-K(q,v)}2.
@@ -79,7 +79,7 @@ The ideal HOM identification requires identical pure nonspatial states, independ
 If the two independent nonspatial states are $\tau_1$ and $\tau_2$, write
 
 ```math
-\eta=\operatorname{Tr}(\tau_1\tau_2).
+\eta=\mathrm{Tr}(\tau_1\tau_2).
 ```
 
 For the ordinary unresolved HOM port measurement, the spatial-overlap term is multiplied by $\eta$:
