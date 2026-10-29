@@ -73,7 +73,7 @@ D(p_q^{\otimes N}\|p_0^{\otimes N})\le2Nq^2.
 The actual Brownian vector is subsequently added using the same probability kernel under both hypotheses. Relative entropy contracts under this common kernel. Pinsker's inequality thus bounds the total variation distance between the actual position records, still at the fixed allowed centroid $`m=0`$, by
 
 ```math
-\operatorname{TV}(P_{q,0}^{v},P_{0,0}^{v})\le q\sqrt N.
+\mathrm{TV}(P_{q,0}^{v},P_{0,0}^{v})\le q\sqrt N.
 ```
 
 Every classical decision rule is a further stochastic map. Restricting the composite alternative to $`q=h`$ and using the optimal equal-prior binary testing error gives
@@ -118,7 +118,7 @@ The source-sign difference is zero with probability $`1/2`$ and $`\pm2`$ with pr
 and
 
 ```math
-\operatorname{Var}_q(Y_j^2)=2w_j^2+8w_jq+4q^2.
+\mathrm{Var}_q(Y_j^2)=2w_j^2+8w_jq+4q^2.
 ```
 
 No small-separation approximation is used in these identities.
@@ -136,7 +136,7 @@ Consider the centered statistic
 It has mean $`0`$ under the null and mean $`2q`$ under the alternative. Let $`W=1+V`$. Independence and the variance formula give
 
 ```math
-\operatorname{Var}_q(\widehat A)
+\mathrm{Var}_q(\widehat A)
 \le\frac{2W^2+8Wq+4q^2}{M}.
 ```
 

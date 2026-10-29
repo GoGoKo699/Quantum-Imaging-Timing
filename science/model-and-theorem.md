@@ -100,13 +100,13 @@ H_1:q\ge h.
 A test is an effect $`0\le M\le I`$; outcome $`1`$ means that the test reports two separated sources. Its type-I and worst alternative errors are
 
 ```math
-\alpha(M)=\sup_{m\in\mathbb R}\operatorname{tr}(M\rho_{0,m}^{v}),
+\alpha(M)=\sup_{m\in\mathbb R}\mathrm{tr}(M\rho_{0,m}^{v}),
 ```
 
 ```math
 \beta_h(M)
 =\sup_{m\in\mathbb R,\ q\ge h}
-\operatorname{tr}[(I-M)\rho_{q,m}^{v}].
+\mathrm{tr}[(I-M)\rho_{q,m}^{v}].
 ```
 
 Define the minimax error

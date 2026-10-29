@@ -32,7 +32,7 @@ This prior is a proof device, not an assumption about the actual initial positio
 Let $`L`$ be the $`N\times N`$ lower-triangular matrix of ones. The averaged centroid vector has the positive definite covariance
 
 ```math
-C=L\operatorname{diag}(V,v_2,\ldots,v_N)L^{\mathsf T}.
+C=L\mathrm{diag}(V,v_2,\ldots,v_N)L^{\mathsf T}.
 ```
 
 In particular, $`V`$ here is the variance of the auxiliary initial-centroid prior. It is not an extra photon gap.
@@ -59,7 +59,7 @@ The map $`f`$ is four times continuously differentiable in trace norm. This foll
 
 ```math
 \|f^{(4)}(x)\|_1
-=\|\operatorname{ad}_{-iP}^{4}(\lvert0\rangle\langle0\rvert)\|_1.
+=\|\mathrm{ad}_{-iP}^{4}(\lvert0\rangle\langle0\rvert)\|_1.
 ```
 
 For any vectors $`u,w`$, $`\||u\rangle\langle w|\|_1=\|u\|\|w\|`$. The vacuum momentum moments
@@ -110,11 +110,11 @@ This estimate is uniform in the eigenvalues of $`C`$. It does not require the Br
 The position and momentum covariance blocks of $`G_C`$ are
 
 ```math
-\operatorname{Cov}(X)=\tfrac12 I+C,
+\mathrm{Cov}(X)=\tfrac12 I+C,
 \qquad
-\operatorname{Cov}(P)=\tfrac12 I,
+\mathrm{Cov}(P)=\tfrac12 I,
 \qquad
-\operatorname{Cov}(X,P)=0.
+\mathrm{Cov}(X,P)=0.
 ```
 
 Choose a real orthogonal matrix diagonalizing $`C`$, with eigenvalues $`c_1,\ldots,c_N>0`$. The corresponding orthogonal coordinate transformation, applied to both positions and momenta, is a unitary on the spatial-register Hilbert space and leaves the product vacuum invariant. Hence the pair $`G_C,G_{C+qI}`$ is unitarily equivalent to
@@ -125,7 +125,7 @@ Choose a real orthogonal matrix diagonalizing $`C`$, with eigenvalues $`c_1,\ldo
 \bigotimes_{j=1}^{N}\rho(c_j+q),
 ```
 
-where the one-mode state $`\rho(c)`$ has covariance $`\operatorname{diag}(1/2+c,1/2)`$. The transformation is used to evaluate a state distance; no implementation assumption about that transformation is needed.
+where the one-mode state $`\rho(c)`$ has covariance $`\mathrm{diag}(1/2+c,1/2)`$. The transformation is used to evaluate a state distance; no implementation assumption about that transformation is needed.
 
 The Gaussian-state fidelity formula of [Banchi, Braunstein and Pirandola (2015)](https://doi.org/10.1103/PhysRevLett.115.260501), specialized to these covariance matrices and expressed in the squared-fidelity convention, is
 
@@ -133,8 +133,8 @@ The Gaussian-state fidelity formula of [Banchi, Braunstein and Pirandola (2015)]
 \begin{aligned}
 F(\rho(c),\rho(c+q))
 &=\frac1{\sqrt{(1+c)(1+c+q)}-\sqrt{c(c+q)}}\\
-&=\operatorname{sech}\!\left[
-\operatorname{asinh}\sqrt{c+q}-\operatorname{asinh}\sqrt c\right].
+&=\mathrm{sech}\!\left[
+\mathrm{asinh}\sqrt{c+q}-\mathrm{asinh}\sqrt c\right].
 \end{aligned}
 ```
 
@@ -143,10 +143,10 @@ For example, at $`c=0`$ this is $`(1+q)^{-1/2}`$, equal to the vacuum overlap of
 Set
 
 ```math
-d_c=\operatorname{asinh}\sqrt{c+q}-\operatorname{asinh}\sqrt c.
+d_c=\mathrm{asinh}\sqrt{c+q}-\mathrm{asinh}\sqrt c.
 ```
 
-Since $`\operatorname{asinh}`$ is increasing and one-Lipschitz on $`[0,\infty)`$,
+Since $`\mathrm{asinh}`$ is increasing and one-Lipschitz on $`[0,\infty)`$,
 
 ```math
 0\le d_c\le\sqrt{c+q}-\sqrt c
@@ -157,7 +157,7 @@ Since $`\operatorname{asinh}`$ is increasing and one-Lipschitz on $`[0,\infty)`$
 For $`u\ge0`$,
 
 ```math
-\frac{d}{du}\left(1-\sqrt{\operatorname{sech}u}\right)
+\frac{d}{du}\left(1-\sqrt{\mathrm{sech}u}\right)
 =\frac{\tanh u}{2\sqrt{\cosh u}}
 \le\frac u2.
 ```
@@ -178,7 +178,7 @@ $`1-\prod_j a_j\le\sum_j(1-a_j)`$ for $`a_j\in[0,1]`$ and the [Fuchs–van de Gr
 T(G_C,G_{C+qI})^2
 &\le1-F(G_C,G_{C+qI})\\
 &\le2\left[1-\sqrt{F(G_C,G_{C+qI})}\right]\\
-&\le\frac{q^2}{2}\operatorname{tr}(C+qI)^{-1}.
+&\le\frac{q^2}{2}\mathrm{tr}(C+qI)^{-1}.
 \end{aligned}
 ```
 
@@ -202,7 +202,7 @@ f_q(A)=A(I+qA)^{-1}
 Put $`H=(I+qA)^{-1}`$. The Woodbury identity gives
 
 ```math
-\operatorname{tr}f_q(A+ww^{\mathsf T})-\operatorname{tr}f_q(A)
+\mathrm{tr}f_q(A+ww^{\mathsf T})-\mathrm{tr}f_q(A)
 =\frac{w^{\mathsf T}H^2w}{1+q w^{\mathsf T}Hw}.
 ```
 
@@ -210,7 +210,7 @@ Because $`0\le H^2\le H\le I`$, the numerator is at most
 $`r=w^{\mathsf T}Hw\le\|w\|^2`$. Monotonicity of $`r/(1+qr)`$ implies
 
 ```math
-\operatorname{tr}f_q(A+ww^{\mathsf T})-\operatorname{tr}f_q(A)
+\mathrm{tr}f_q(A+ww^{\mathsf T})-\mathrm{tr}f_q(A)
 \le\frac{\|w\|^2}{1+q\|w\|^2}.
 ```
 
@@ -218,8 +218,8 @@ Iterating from $`A=0`$ with $`w=b_i/\sqrt{u_i}`$ proves
 
 ```math
 \begin{aligned}
-\operatorname{tr}(C+qI)^{-1}
-&=\operatorname{tr}f_q(C^{-1})\\
+\mathrm{tr}(C+qI)^{-1}
+&=\mathrm{tr}f_q(C^{-1})\\
 &\le\sum_{i=1}^{N}\frac{\|b_i\|^2}{u_i+q\|b_i\|^2}\\
 &\le2\sum_{i=1}^{N}\frac1{u_i+q}.
 \end{aligned}

@@ -89,7 +89,7 @@ A(P,Q)=\sum_y\sqrt{P(y)Q(y)}.
 For $`p=p_v(0)`$, $`r=p_v(h)`$, and $`\delta=r-p`$,
 
 ```math
-H^2(\operatorname{Ber}(p),\operatorname{Ber}(r))
+H^2(\mathrm{Ber}(p),\mathrm{Ber}(r))
  =\frac{\delta^2}{2}
  \left\{\frac{1}{(\sqrt p+\sqrt r)^2}
        +\frac{1}{(\sqrt{1-p}+\sqrt{1-r})^2}\right\}.
@@ -122,7 +122,7 @@ Substitution in the Hellinger expression proves
 ```math
 \boxed{\displaystyle
 c^{\rm pair}_{V,q_0}\frac{h^2}{v+h}
- \le H^2(\operatorname{Ber}(p_v(0)),\operatorname{Ber}(p_v(h)))
+ \le H^2(\mathrm{Ber}(p_v(0)),\mathrm{Ber}(p_v(h)))
  \le C^{\rm pair}_{V,q_0}\frac{h^2}{v+h},}
 ```
 
@@ -173,7 +173,7 @@ Reject the null if $`\ell_h(Y)\ge0`$. Ties may instead be randomized; the bounds
 
 ```math
 A_M(0,h)=\prod_{i\in M}
- A(\operatorname{Ber}(p_{v_i}(0)),\operatorname{Ber}(p_{v_i}(h)))
+ A(\mathrm{Ber}(p_{v_i}(0)),\mathrm{Ber}(p_{v_i}(h)))
  \le \exp\left[-\sum_{i\in M}H_i^2\right].
 ```
 

@@ -12,7 +12,7 @@ Set the time origin at the first recorded photon, $`t_1=0`$, and acquire $`N\ge2
 n=N-1,\qquad
 v_i=\frac{D}{\sigma^2}(t_i-t_{i-1}),\qquad
 \kappa=\frac{D}{\lambda\sigma^2},\qquad
-v_i\overset{\rm iid}{\sim}\operatorname{Exp}(\text{mean }\kappa),\quad i=2,\ldots,N.
+v_i\overset{\rm iid}{\sim}\mathrm{Exp}(\text{mean }\kappa),\quad i=2,\ldots,N.
 ```
 
 Here $`D>0`$, $`\lambda>0`$, and the intensity point-spread function has physical variance $`\sigma^2`$. The separation parameter remains $`q=s^2/(8\sigma^2)`$. The time between the first and last recorded photons has mean $`n/\lambda`$ and no deterministic upper bound.
@@ -64,7 +64,7 @@ Thus the fixed-error boundary is $`\mathcal I_N(h,\kappa)=\Theta(1)`$. The proof
 
 ## 3. The resolvent average
 
-For $`v\sim\operatorname{Exp}(\text{mean }\kappa)`$,
+For $`v\sim\mathrm{Exp}(\text{mean }\kappa)`$,
 
 ```math
 \mathbb E\frac1{v+h}
@@ -87,7 +87,7 @@ For the lower bound, restrict the integral to $`0\le v\le\kappa`$, where its den
 For a minimax lower bound, average the allowed initial centroid under the same prior $`m\sim N(0,\kappa_0)`$ under both hypotheses. This prior is a proof device, not an assumption about the actual source. Conditional on the observed gaps, the Brownian covariance is
 
 ```math
-C_v=L\operatorname{diag}(\kappa_0,v_2,\ldots,v_N)L^{\mathsf T},
+C_v=L\mathrm{diag}(\kappa_0,v_2,\ldots,v_N)L^{\mathsf T},
 ```
 
 where $`L`$ is the lower-triangular cumulative-sum matrix. The conditional state bound proved in the [collective converse](collective-converse.md) holds for **all positive increment variances**, with no upper bound on them:
@@ -154,7 +154,7 @@ The independence argument and Hellinger convention $`H^2=1-A`$ are established i
 
 ```math
 H^2(f_0,f_h)
- =\mathbb E_v\,H^2(\operatorname{Ber}(p_v(0)),\operatorname{Ber}(p_v(h))).
+ =\mathbb E_v\,H^2(\mathrm{Ber}(p_v(0)),\mathrm{Ber}(p_v(h))).
 ```
 
 Restrict the integral to $`0\le v\le\kappa\le\kappa_0`$. The bounded-interval pair estimate, together with the density lower bound on this interval, gives
