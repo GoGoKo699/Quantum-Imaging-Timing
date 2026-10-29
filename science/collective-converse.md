@@ -75,7 +75,7 @@ then imply
 \|f^{(4)}(x)\|_1
 &\le\sum_{k=0}^{4}\binom4k
 \sqrt{\langle P^{2k}\rangle\langle P^{2(4-k)}\rangle}\\
-&=\frac{\sqrt{105}}2+2\sqrt{15}+\frac92<18.
+&=\frac{\sqrt{105}}2+2\sqrt{15}+\frac92\lt 18.
 \end{aligned}
 ```
 

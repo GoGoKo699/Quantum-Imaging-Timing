@@ -151,7 +151,7 @@ For any actual $`q\ge h`$, the distance from the alternative mean to the thresho
 
 ```math
 \begin{aligned}
-\sup_m\Pr_{q,m}(\widehat A<h)
+\sup_m\Pr_{q,m}(\widehat A\lt h)
 &\le\frac{2W^2+8Wq+4q^2}{M(2q-h)^2}\\
 &\le\frac1M\left(\frac{2W^2}{q^2}+\frac{8W}{q}+4\right)\\
 &\le\frac1M\left(\frac{2W^2}{h^2}+\frac{8W}{h}+4\right).

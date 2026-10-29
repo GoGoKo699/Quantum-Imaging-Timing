@@ -59,7 +59,7 @@ W_j\sim\mathcal N(0,v_j)
 The gap variances $`v=(v_2,\ldots,v_N)`$ are known and satisfy
 
 ```math
-0<v_i\le V,
+0\lt v_i\le V,
 \qquad i=2,\ldots,N,
 ```
 

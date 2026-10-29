@@ -32,7 +32,7 @@ Let $`R_N^{\rm Pois,*}(h)`$ be the infimum over all permitted receivers. This is
 Fix $`\kappa_0,q_0>0`$. The constants below are uniform for
 
 ```math
-0<\kappa\le\kappa_0,\qquad 0<h\le q_0.
+0\lt \kappa\le\kappa_0,\qquad 0\lt h\le q_0.
 ```
 
 Only the design threshold is restricted to $`h\le q_0`$. The alternative $`q\ge h`$ is unbounded.
@@ -141,7 +141,7 @@ The records $`(v,Y)`$ for these pairs are independent and identically distribute
 
 ```math
 f_q(v,y)=\frac{e^{-v/\kappa}}\kappa\,
- p_v(q)^y[1-p_v(q)]^{1-y},\qquad v>0,\quad y\in\{0,1\},
+ p_v(q)^y[1-p_v(q)]^{1-y},\qquad v\gt 0,\quad y\in\{0,1\},
 ```
 
 where

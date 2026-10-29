@@ -61,7 +61,7 @@ and
 
 ```math
 \frac{\partial p_v(q)}{\partial q}
- =\frac{e^{-2q/(1+v)}}{2(1+v)^{3/2}}>0.
+ =\frac{e^{-2q/(1+v)}}{2(1+v)^{3/2}}\gt 0.
 ```
 
 The common centroid cancels from this response exactly. No small-motion expansion has been used.
@@ -180,7 +180,7 @@ A_M(0,h)=\prod_{i\in M}
 The likelihood-ratio test with threshold one has
 
 ```math
-\Pr_0(\ell_h\ge0)+\Pr_h(\ell_h<0)
+\Pr_0(\ell_h\ge0)+\Pr_h(\ell_h\lt 0)
  =\sum_y\min\{P_0(y),P_h(y)\}
  \le A_M(0,h).
 ```
