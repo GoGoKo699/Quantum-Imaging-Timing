@@ -103,6 +103,466 @@
       "precision_cases": 600,
       "status": "passed"
     },
+    "verify_joint.py": {
+      "collision_substitution": {
+        "cases": 9,
+        "chi_squared_over_z_fourth_range": [
+          0.16670482649858911,
+          0.1802880915072801
+        ],
+        "maximum_kernel_quadrature_error": 2.220446049250313e-16
+      },
+      "covariance_extraction": {
+        "matrix_cases": 60,
+        "smallest_difference_eigenvalue": -6.346507702933664e-14,
+        "weighted_sum_cases": 480,
+        "weighted_sum_ratio_range": [
+          1.0105263910526292,
+          20.0
+        ]
+      },
+      "purpose": "finite identities and regression checks; not a uniform theorem proof",
+      "relative_modes": {
+        "HG_modes_retained": 180,
+        "cases": 100,
+        "maximum_absolute_error": 2.220446049250313e-15,
+        "quadrature_nodes": 96
+      },
+      "schedule_endpoints": {
+        "close_doublet_cases": 48,
+        "joint_to_static_order_ratio": [
+          1.140973689947765,
+          2.731970401446009
+        ],
+        "physical_jitter_examples": [
+          {
+            "N": 1000,
+            "b": 1e-06,
+            "perfect_calibration_floor": 0.0027246656897704424,
+            "zero_jitter_floor": 0.002724092485597367
+          },
+          {
+            "N": 1000,
+            "b": 0.001,
+            "perfect_calibration_floor": 0.0032239691345687664,
+            "zero_jitter_floor": 0.002724092485597367
+          },
+          {
+            "N": 1000,
+            "b": 0.1,
+            "perfect_calibration_floor": 0.014466962408525668,
+            "zero_jitter_floor": 0.002724092485597367
+          },
+          {
+            "N": 10000,
+            "b": 1e-06,
+            "perfect_calibration_floor": 0.0002737007302985909,
+            "zero_jitter_floor": 0.00027312475019531025
+          },
+          {
+            "N": 10000,
+            "b": 0.001,
+            "perfect_calibration_floor": 0.0005789970113959438,
+            "zero_jitter_floor": 0.00027312475019531025
+          },
+          {
+            "N": 10000,
+            "b": 0.1,
+            "perfect_calibration_floor": 0.004369035666203386,
+            "zero_jitter_floor": 0.00027312475019531025
+          },
+          {
+            "N": 100000,
+            "b": 1e-06,
+            "perfect_calibration_floor": 2.7887698499290295e-05,
+            "zero_jitter_floor": 2.7319704014460092e-05
+          },
+          {
+            "N": 100000,
+            "b": 0.001,
+            "perfect_calibration_floor": 0.00015238342684724244,
+            "zero_jitter_floor": 2.7319704014460092e-05
+          },
+          {
+            "N": 100000,
+            "b": 0.1,
+            "perfect_calibration_floor": 0.001362560295533424,
+            "zero_jitter_floor": 2.7319704014460092e-05
+          }
+        ]
+      },
+      "status": "passed",
+      "weighted_shape": {
+        "active_cases": 45,
+        "cases": [
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.99998,
+            "gaps": "close",
+            "n": 50000,
+            "normalized_variance": 0.6747499368809494,
+            "q": 0.0
+          },
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.99998,
+            "gaps": "close",
+            "n": 50000,
+            "normalized_variance": 1.593272583812324,
+            "q": 0.005
+          },
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.99998,
+            "gaps": "close",
+            "n": 50000,
+            "normalized_variance": 1.6097055794077204,
+            "q": 0.01
+          },
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.99998,
+            "gaps": "close",
+            "n": 50000,
+            "normalized_variance": 0.9801982073064334,
+            "q": 0.1
+          },
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.99998,
+            "gaps": "close",
+            "n": 50000,
+            "normalized_variance": 1.0104907496335722,
+            "q": 0.25
+          },
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.9999740989696148,
+            "gaps": "heterogeneous",
+            "n": 50000,
+            "normalized_variance": 0.7376006411459487,
+            "q": 0.0
+          },
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.9999740989696148,
+            "gaps": "heterogeneous",
+            "n": 50000,
+            "normalized_variance": 1.6963448144292061,
+            "q": 0.005
+          },
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.9999740989696148,
+            "gaps": "heterogeneous",
+            "n": 50000,
+            "normalized_variance": 1.7669539968112375,
+            "q": 0.01
+          },
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.9999740989696148,
+            "gaps": "heterogeneous",
+            "n": 50000,
+            "normalized_variance": 1.0875959822633958,
+            "q": 0.1
+          },
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.9999740989696148,
+            "gaps": "heterogeneous",
+            "n": 50000,
+            "normalized_variance": 1.1168153107084253,
+            "q": 0.25
+          },
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.9999750130214262,
+            "gaps": "mixed",
+            "n": 50000,
+            "normalized_variance": 0.6757298046624971,
+            "q": 0.0
+          },
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.9999750130214262,
+            "gaps": "mixed",
+            "n": 50000,
+            "normalized_variance": 1.6562363576911692,
+            "q": 0.005
+          },
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.9999750130214262,
+            "gaps": "mixed",
+            "n": 50000,
+            "normalized_variance": 1.736170849218815,
+            "q": 0.01
+          },
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.9999750130214262,
+            "gaps": "mixed",
+            "n": 50000,
+            "normalized_variance": 1.0949267626790409,
+            "q": 0.1
+          },
+          {
+            "b": 0.01,
+            "cross_product_normalizer": 0.9999750130214262,
+            "gaps": "mixed",
+            "n": 50000,
+            "normalized_variance": 1.1292561915868027,
+            "q": 0.25
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.99995,
+            "gaps": "close",
+            "n": 20000,
+            "normalized_variance": 0.688097978647871,
+            "q": 0.0
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.99995,
+            "gaps": "close",
+            "n": 20000,
+            "normalized_variance": 1.242917756683044,
+            "q": 0.015
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.99995,
+            "gaps": "close",
+            "n": 20000,
+            "normalized_variance": 1.0312190791893636,
+            "q": 0.03
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.99995,
+            "gaps": "close",
+            "n": 20000,
+            "normalized_variance": 0.6709751730244425,
+            "q": 0.1
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.99995,
+            "gaps": "close",
+            "n": 20000,
+            "normalized_variance": 0.606824399210046,
+            "q": 0.25
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.9999402703889166,
+            "gaps": "heterogeneous",
+            "n": 20000,
+            "normalized_variance": 0.7500864187612465,
+            "q": 0.0
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.9999402703889166,
+            "gaps": "heterogeneous",
+            "n": 20000,
+            "normalized_variance": 1.331875445331548,
+            "q": 0.015
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.9999402703889166,
+            "gaps": "heterogeneous",
+            "n": 20000,
+            "normalized_variance": 1.1203349632420998,
+            "q": 0.03
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.9999402703889166,
+            "gaps": "heterogeneous",
+            "n": 20000,
+            "normalized_variance": 0.7248400179855984,
+            "q": 0.1
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.9999402703889166,
+            "gaps": "heterogeneous",
+            "n": 20000,
+            "normalized_variance": 0.6500196803767946,
+            "q": 0.25
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.9999377568278635,
+            "gaps": "mixed",
+            "n": 20000,
+            "normalized_variance": 0.6953796794197935,
+            "q": 0.0
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.9999377568278635,
+            "gaps": "mixed",
+            "n": 20000,
+            "normalized_variance": 1.3159769517373991,
+            "q": 0.015
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.9999377568278635,
+            "gaps": "mixed",
+            "n": 20000,
+            "normalized_variance": 1.1265906860522197,
+            "q": 0.03
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.9999377568278635,
+            "gaps": "mixed",
+            "n": 20000,
+            "normalized_variance": 0.7464579329667799,
+            "q": 0.1
+          },
+          {
+            "b": 0.03,
+            "cross_product_normalizer": 0.9999377568278635,
+            "gaps": "mixed",
+            "n": 20000,
+            "normalized_variance": 0.6762421752782962,
+            "q": 0.25
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9998,
+            "gaps": "close",
+            "n": 5000,
+            "normalized_variance": 0.7370516056824797,
+            "q": 0.0
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9998,
+            "gaps": "close",
+            "n": 5000,
+            "normalized_variance": 1.0270435490076206,
+            "q": 0.05
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9998,
+            "gaps": "close",
+            "n": 5000,
+            "normalized_variance": 0.7603614236767826,
+            "q": 0.1
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9998,
+            "gaps": "close",
+            "n": 5000,
+            "normalized_variance": 0.7603614236767826,
+            "q": 0.1
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9998,
+            "gaps": "close",
+            "n": 5000,
+            "normalized_variance": 0.5402331620957306,
+            "q": 0.25
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9997767263107351,
+            "gaps": "heterogeneous",
+            "n": 5000,
+            "normalized_variance": 0.8103995880436485,
+            "q": 0.0
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9997767263107351,
+            "gaps": "heterogeneous",
+            "n": 5000,
+            "normalized_variance": 1.1014460575480078,
+            "q": 0.05
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9997767263107351,
+            "gaps": "heterogeneous",
+            "n": 5000,
+            "normalized_variance": 0.8139678669634991,
+            "q": 0.1
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9997767263107351,
+            "gaps": "heterogeneous",
+            "n": 5000,
+            "normalized_variance": 0.8139678669634991,
+            "q": 0.1
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9997767263107351,
+            "gaps": "heterogeneous",
+            "n": 5000,
+            "normalized_variance": 0.5703665543288379,
+            "q": 0.25
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9997574104378202,
+            "gaps": "mixed",
+            "n": 5000,
+            "normalized_variance": 0.7831495012051478,
+            "q": 0.0
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9997574104378202,
+            "gaps": "mixed",
+            "n": 5000,
+            "normalized_variance": 1.1099227241847296,
+            "q": 0.05
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9997574104378202,
+            "gaps": "mixed",
+            "n": 5000,
+            "normalized_variance": 0.8336827887881527,
+            "q": 0.1
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9997574104378202,
+            "gaps": "mixed",
+            "n": 5000,
+            "normalized_variance": 0.8336827887881527,
+            "q": 0.1
+          },
+          {
+            "b": 0.1,
+            "cross_product_normalizer": 0.9997574104378202,
+            "gaps": "mixed",
+            "n": 5000,
+            "normalized_variance": 0.5935957441570789,
+            "q": 0.25
+          }
+        ],
+        "complete_record_enumeration_cases": 2,
+        "maximum_enumeration_error": 2.220446049250313e-16,
+        "maximum_normalized_variance": 1.7669539968112375,
+        "maximum_q_over_b": 25.0,
+        "minimum_cross_product_normalizer": 0.9997574104378202
+      }
+    },
     "verify_receiver.py": {
       "finite_tests": {
         "enumerated_tests": [
@@ -236,8 +696,9 @@
   },
   "schema_version": 1,
   "source_sha256": {
-    "run_all.py": "d7ebe50409d694622a86aa2c920e362251f6bf6cf77657415c2e1116a67f9b19",
+    "run_all.py": "c922bfa1756ee2a5043a15ed50ca80e34c3968998c6d027b8899f234d5a66f50",
     "verify_converse.py": "c43a34ef1975969e227c980e8361e72797b01e3f3e7d72e3d30d60647238065b",
+    "verify_joint.py": "6a9e73c5a9d0bc14ebaac293a1a7041e845c72e73d1b14b089ec5aad2f766eb7",
     "verify_receiver.py": "244a52b3301644d462fef4ddea1f692a5322e394681ba2eb286d8abd62722f79"
   }
 }

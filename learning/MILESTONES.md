@@ -1,17 +1,17 @@
 # Thirty milestones for Quantum Imaging Timing
 
-This map connects the optical model, the testing problem, the proofs and the acquisition resources that determine the result. Its single educational anchor is Mankei Tsang, [*Resolving starlight: a quantum perspective*, arXiv:1906.02064v2][tsang]. All anchor section numbers refer to that version. The [Tsang bridge](TSANG_BRIDGE.md) translates the review's notation and assumptions into this project's experiment.
+This map connects the optical model, the testing problem and the acquisition resources to two linked results: the Brownian timing law and the joint timing–jitter–calibration frontier. Its single educational anchor is Mankei Tsang, [*Resolving starlight: a quantum perspective*, arXiv:1906.02064v2][tsang]. All anchor section numbers refer to that version. The [Tsang bridge](TSANG_BRIDGE.md) translates the review's notation and assumptions into this project's experiment.
 
 The allocation follows the scientific structure:
 
 | Phase | Milestones | Progression and integrative endpoint |
 |---|---|---|
 | Background/preliminaries | M01–M12 | From one photon's spatial state and a statistical task to the complete correlated experiment, its access assumptions and its proof requirements. M12 integrates these ingredients. |
-| Narrative/innovation | M13–M30 | From one invariant pair comparison to matching upper and lower bounds, then to acquisition regimes and the physical meaning of the result. M30 integrates the contribution and its limits. |
+| Narrative/innovation | M13–M30 | From one invariant pair comparison to the timing law, then to a joint receiver and converse with unknown jitter and charged calibration. M30 integrates the contribution and its limits. |
 
-Twelve preliminary milestones provide the shared optical, probabilistic and decision-theoretic language. Eighteen narrative milestones are needed because the result joins two substantial arguments—an attaining receiver and an all-receiver converse—and then distinguishes several acquisition experiments. The map identifies the main understanding targets; specialist calculations remain in the canonical science pages.
+Twelve preliminary milestones provide the shared optical, probabilistic and decision-theoretic language. Eighteen narrative milestones join the original pair/fidelity timing proof to the relative-mode moment construction and covariance-extraction converse for the joint experiment. The final milestones distinguish learning a jitter variance from removing physical jitter. The map identifies the main understanding targets; specialist calculations remain in the canonical science pages.
 
-An **anchor context** pointer identifies an entry into an idea, without attributing a project proof to the review. The Brownian record, binary-to-Gaussian comparison, Gaussian-fidelity specialization, precision-matrix bound, pair Hellinger inequalities and composite likelihood-ratio argument are supplied in the local science. Their mathematical antecedents remain credited in [related work](../references/related-work.md#6-imported-mathematical-tools).
+An **anchor context** pointer identifies an entry into an idea, without attributing a project proof to the review. The Brownian record, binary-to-Gaussian comparison, Gaussian-fidelity specialization, precision-matrix bound, pair Hellinger inequalities, composite likelihood-ratio argument and the joint covariance/moment proofs are supplied in the local science. Their mathematical antecedents remain credited in [related work](../references/related-work.md#6-imported-mathematical-tools).
 
 ## Phase 1 — Background/preliminaries
 
@@ -105,7 +105,7 @@ An **anchor context** pointer identifies an entry into an idea, without attribut
 
 **Central question:** How does a known list of arrival gaps specify the Brownian part of the experiment?
 
-**Understanding target:** Relate independent increments $`W_i`$, cumulative positions $`B_i`$ and known variances $`v_i=D\Delta t_i/\sigma^2`$. Explain why neighboring relative displacements can be simple even when absolute positions throughout the record are strongly correlated.
+**Understanding target:** Relate independent increments $`W_i`$, cumulative positions $`B_i`$ and known variances $`v_i=D\Delta t_i/\sigma^2`$. Explain why neighboring relative displacements can be simple even when absolute positions throughout the record are strongly correlated. Distinguish this common motion from a fresh independent displacement on each photon.
 
 **Dependencies and story role:** Requires M05–M06. Introduces the temporal structure that will support both the invariant receiver and the precision-matrix converse.
 
@@ -119,7 +119,7 @@ An **anchor context** pointer identifies an entry into an idea, without attribut
 
 **Central question:** What exactly must a test guarantee for an unknown centroid and an unknown separation?
 
-**Understanding target:** Interpret the maximum of worst type-I and type-II errors for $`q=0`$ versus $`q\ge h`$. Keep a local restriction on the chosen threshold $`h`$ separate from the unbounded alternative, and distinguish this criterion from Fisher information or an unbiased-estimation bound.
+**Understanding target:** Interpret the maximum of worst type-I and type-II errors for $`q=0`$ versus $`q\ge h`$. Keep the original timing theorem's local threshold and unbounded separated alternative distinct from the joint theorem's fixed local alternative $`h\le q\le q_0`$. Distinguish both testing criteria from Fisher information or an unbiased-estimation bound.
 
 **Dependencies and story role:** Requires M01, M04 and M05. Turns the physical question into precise quantifiers that every subsequent upper and lower bound must preserve.
 
@@ -161,7 +161,7 @@ An **anchor context** pointer identifies an entry into an idea, without attribut
 
 **Central question:** Which resources must be specified before comparing imaging protocols?
 
-**Understanding target:** Distinguish a fixed received count, an expected photon count, a total acquisition duration and a list of occupied-register times. Explain why a timestamp, a preserved spatial state and the ability to interfere two stored photons are separate resources.
+**Understanding target:** Distinguish a fixed received count, an expected photon count, a total acquisition duration and a list of occupied-register times. Explain why a timestamp, a preserved spatial state and the ability to perform a joint spatial measurement are separate resources. Count calibration photons separately; a source revealing a distributional parameter is not a free trajectory monitor.
 
 **Dependencies and story role:** Requires M06–M07 and M09. Adds the resource accounting needed to interpret schedule comparisons without changing the experiment silently.
 
@@ -175,13 +175,13 @@ An **anchor context** pointer identifies an entry into an idea, without attribut
 
 **Central question:** How do the state, nuisance, timing record, receiver class and error criterion fit into one experiment?
 
-**Understanding target:** Assemble the supplied register state, its Brownian correlations, the known schedule and the composite minimax task. Explain why establishing an optimal resolution order requires both a receiver achieving it and a converse for the same state and the same risk.
+**Understanding target:** Assemble the supplied register state, its Brownian correlations, the known schedule and the composite minimax task. Identify the additional nuisance class and point-calibration source needed for the joint experiment. Explain why establishing an optimal resolution order requires both a receiver achieving it and a converse for the same state and the same risk.
 
 **Dependencies and story role:** Integrates M01–M11. Ends the preliminary phase with one coherent specification and a clear explanation of what the narrative phase must establish.
 
 **Conceptual connection:** Connects optics, stochastic motion and decision theory into the precise question: how much does the list of gaps change the best attainable testing scale?
 
-**Source pointers:** Anchor synthesis: [Tsang §§II, VIII.A and VIII.K][tsang]; [model §§1–4](../science/model-and-theorem.md); [physical interface §1](../science/physical-interface.md#1-what-is-supplied-to-the-receiver); [Tsang bridge](TSANG_BRIDGE.md).
+**Source pointers:** Anchor synthesis: [Tsang §§II, VIII.A and VIII.K][tsang]; [model §§1–4](../science/model-and-theorem.md); [joint experiment](../science/joint-model.md); [physical interface §1](../science/physical-interface.md#1-what-is-supplied-to-the-receiver); [Tsang bridge](TSANG_BRIDGE.md).
 
 ## Phase 2 — Narrative/innovation
 
@@ -189,252 +189,252 @@ An **anchor context** pointer identifies an entry into an idea, without attribut
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How can two photons reveal separation information without locating their common centroid?
+**Central question:** How can two photons carry separation information without a known absolute centroid?
 
-**Understanding target:** Explain the symmetric and antisymmetric SWAP sectors and their invariance under a common translation. Relate the antisymmetric probability for two pure spatial states to their overlap, while keeping the abstract measurement distinct from its optical realization.
+**Understanding target:** Explain why a common translation leaves a SWAP comparison unchanged. Identify the relative source-sign displacement and distinguish the invariant measurement from estimating and subtracting a centroid.
 
-**Dependencies and story role:** Requires M02, M05, M09 and M12. Starts the new mechanism at the level of one pair rather than the full acquisition.
+**Dependencies and story role:** Requires M02–M07 and M09. Starts the narrative with one local measurement whose nuisance invariance is exact.
 
-**Conceptual connection:** Connects relative spatial information to an invariant quantum comparison; the reference-free comparison idea has static precedents.
+**Conceptual connection:** Connects the anchor's two-photon viewpoint to the unknown-centroid Brownian experiment.
 
-**Source pointers:** Anchor context: [Tsang §VI.G][tsang]; local calculation: [receiver §1](../science/receiver.md#1-exact-probability-for-a-pair); [physical interface §§2–3](../science/physical-interface.md).
+**Source pointers:** [Tsang §§VI.G and VIII.A][tsang]; [pair receiver §1](../science/receiver.md#1-exact-probability-for-a-pair); [worked pair](TSANG_BRIDGE.md#6-worked-pair-a-zero-null-probability-and-a-brownian-background).
 
-### M14 — The exact response to a moving pair
-
-**Phase:** Narrative/innovation.
-
-**Central question:** How do source separation and motion during a gap enter the same measurement outcome?
-
-**Understanding target:** Follow the averaging over the three possible source-label differences and the Gaussian Brownian increment. Interpret the exact response $`p_v(q)`$, its motion-induced null background and its monotone increase with separation.
-
-**Dependencies and story role:** Requires M03, M07 and M13. Converts the invariant pair idea into a quantitative probability law that is valid before any small-parameter approximation.
-
-**Conceptual connection:** Connects Gaussian wave-packet overlaps to the competition between relative source displacement and relative centroid motion.
-
-**Source pointers:** Anchor context: [Tsang §V][tsang]; local pair law and Gaussian integration: [receiver §1](../science/receiver.md#1-exact-probability-for-a-pair).
-
-### M15 — Independence recovered by the measurement
+### M14 — The exact moving-pair response
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Why can selected pair outcomes be independent when the quantum input record is correlated?
+**Central question:** What makes an antisymmetric event possible under a single-source null?
 
-**Understanding target:** Trace each outcome to its pair's internal Brownian increment and two source signs. Explain why disjoint adjacent pairs use independent ingredients after common translations cancel, and why this argument does not justify independence for arbitrary photon measurements.
+**Understanding target:** Read the exact SWAP probability as a Gaussian average. Distinguish the zero-motion dark outcome from the positive background produced by an internal Brownian increment; identify how a known independent jitter variance changes that background.
 
-**Dependencies and story role:** Requires M06–M07 and M14. Lifts the single-pair response to a usable collection of classical observations without discarding the original correlations by assumption.
+**Dependencies and story role:** Requires M07 and M13. Turns the invariant measurement into an explicit observation law before applying approximations.
 
-**Conceptual connection:** Connects symmetry of a measurement with conditional independence in a latent stochastic model.
+**Conceptual connection:** Connects spatial overlap to the contrast between a separation signal and physical random displacement.
 
-**Source pointers:** Anchor context: [Tsang Appendix C][tsang], for the role of product assumptions; local independence proof: [receiver §1, independence subsection](../science/receiver.md#why-the-selected-outcomes-are-independent).
+**Source pointers:** [Tsang §VI.G][tsang]; [exact pair response](../science/receiver.md#1-exact-probability-for-a-pair); [known-jitter law](../science/joint-converse.md); [bridge worked pair](TSANG_BRIDGE.md#6-worked-pair-a-zero-null-probability-and-a-brownian-background).
 
-### M16 — The information carried by one gap
-
-**Phase:** Narrative/innovation.
-
-**Central question:** Why does one pair contribute the scale $`h^2/(v+h)`$?
-
-**Understanding target:** Relate the pair's signal change, null background and Hellinger distance. Distinguish the nearly static regime $`v\ll h`$ from the motion-dominated regime $`v\gg h`$, and recognize that the estimate is uniform across their crossover.
-
-**Dependencies and story role:** Requires M10 and M14. Identifies the local quantity whose sum will govern the complete schedule.
-
-**Conceptual connection:** Connects the physical background in a binary measurement to finite-error testing information, without substituting Fisher information evaluated exactly at the null.
-
-**Source pointers:** Anchor context: [Tsang §VIII.K][tsang]; locally supplied Hellinger bounds: [receiver §2](../science/receiver.md#2-the-pairs-testing-information); [model §4](../science/model-and-theorem.md#4-schedule-information).
-
-### M17 — From pair information to a composite test
+### M15 — Independence recovered by a matching
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How can one executable receiver exploit a general known schedule and cover every $`q\ge h`$?
+**Central question:** Why may selected pair outcomes be independent even though the full photon record is correlated?
 
-**Understanding target:** Explain why the two parity matchings retain at least half the total gap weight. Connect their independent outcomes to a likelihood-ratio test designed at $`h`$, and use the increasing rejection event to extend its guarantee to every larger actual separation.
+**Understanding target:** Identify the disjoint internal Brownian increments and source signs used by one adjacent matching. Explain why the two parity matchings partition the edges and why one captures at least half of a supplied nonnegative information sum.
 
-**Dependencies and story role:** Requires M08, M12 and M15–M16. Completes the attaining branch, including the distinction between a chosen threshold and an unknown parameter.
+**Dependencies and story role:** Requires M06–M07 and M13–M14. Assembles local comparisons into a record suitable for an attaining test.
 
-**Conceptual connection:** Connects a simple path matching, product affinities and stochastic ordering to a uniform composite error guarantee.
+**Conceptual connection:** Connects stochastic-process structure to a measurement-induced product experiment without falsely factorizing the original state.
 
-**Source pointers:** Anchor context: [Tsang §VIII.K and Appendix B][tsang]; local matching and testing proofs: [receiver §§3–4](../science/receiver.md#3-choose-the-matching-at-the-design-threshold).
+**Source pointers:** Anchor context: [Tsang Appendix C][tsang]; local proof: [receiver §§1 and 3](../science/receiver.md); [joint relative states](../science/joint-receiver.md).
 
-### M18 — A controlled Gaussian comparison
-
-**Phase:** Narrative/innovation.
-
-**Central question:** Why is a Gaussian surrogate useful, and what makes replacing binary source signs legitimate?
-
-**Understanding target:** Explain the matching displacement moments through third order and the fourth-order trace-norm remainder. Account for the accumulated $`Nq^2`$ cost under tensor telescoping and the common Brownian channel, without treating the original binary-source state as Gaussian.
-
-**Dependencies and story role:** Requires M02–M03, M06, M10 and M12. Starts the converse branch by reducing a non-Gaussian correlated state to a comparison whose error is explicitly controlled.
-
-**Conceptual connection:** Connects the physical two-branch mixture to moment comparison and stability under a common quantum channel.
-
-**Source pointers:** Anchor context: [Tsang §V and Appendix C][tsang]; locally supplied comparison: [collective converse §2](../science/collective-converse.md#2-a-uniform-gaussian-replacement-bound).
-
-### M19 — Fidelity without discarding correlations
+### M16 — One gap and its testing information
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How does the Gaussian comparison make a bound on the entire record tractable?
+**Central question:** Why does one gap contribute an interpolation between a dark-event and a noisy-background scale?
 
-**Understanding target:** Explain how a common orthogonal coordinate transformation diagonalizes the displacement covariance and preserves the spatial vacuum. Track squared versus root fidelity and the conversion to a resolvent bound on trace distance. Recognize the diagonalization as a mathematical comparison, without requiring the attaining receiver to implement it.
+**Understanding target:** Explain the role of $`q^2/(q+v_i)`$ in finite-error testing. Keep a uniform interpolation distinct from a fixed-positive-gap Taylor expansion or a Fisher-information formula.
 
-**Dependencies and story role:** Requires M07, M10 and M18. Converts the full correlated Gaussian state into a computable distinguishability bound.
+**Dependencies and story role:** Requires M08, M10 and M14–M15. Establishes the local information quantity that the schedule theorem sums.
 
-**Conceptual connection:** Connects covariance eigenmodes to a measurement-independent limit; the correlations are represented and transformed, rather than omitted.
+**Conceptual connection:** Connects a physical null background to Hellinger affinity and its accumulation over independent outcomes.
 
-**Source pointers:** Anchor context: [Tsang §II and Appendix B][tsang]; local fidelity specialization: [collective converse §3](../science/collective-converse.md#3-fidelity-of-the-gaussian-comparison-states); mathematical attribution: [related work §6](../references/related-work.md#6-imported-mathematical-tools). The review does not supply this Gaussian-fidelity proof.
+**Source pointers:** [Tsang §§VIII.J–K][tsang]; [pair information](../science/receiver.md#2-the-pairs-testing-information); [bridge §6](TSANG_BRIDGE.md#6-worked-pair-a-zero-null-probability-and-a-brownian-background).
 
-### M20 — Brownian precision reveals the gap functional
-
-**Phase:** Narrative/innovation.
-
-**Central question:** How can a global covariance bound be expressed using individual arrival gaps?
-
-**Understanding target:** Explain the cumulative-sum covariance and the first-difference precision matrix. Identify how rank-one inverse updates control $`\mathrm{tr}(C+hI)^{-1}`$ by a sum of regularized inverse increments, and why this step is uniform over uneven positive gaps.
-
-**Dependencies and story role:** Requires M07 and M19. Connects the converse's global spectral quantity to the same local timing weights already found by the pair receiver.
-
-**Conceptual connection:** Connects the Markov structure of Brownian motion to a matrix inequality that exposes acquisition resources.
-
-**Source pointers:** Anchor context: [Tsang §II][tsang], for the goal of a receiver-independent limit; locally supplied precision and resolvent proof: [collective converse §4](../science/collective-converse.md#4-brownian-precision-controls-the-resolvent). Brownian precision is outside the anchor's derivation.
-
-### M21 — Closing the nuisance-uniform converse
+### M17 — A converse that retains the correlated state
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How does a Gaussian prior on an unrestricted nuisance establish a worst-case lower bound?
+**Central question:** How can a lower bound cover every receiver rather than only the proposed pair apparatus?
 
-**Understanding target:** Explain why the same auxiliary centroid prior under both hypotheses gives a valid Bayes subproblem of the minimax task. Identify its covariance contribution, distinguish it from a physical first waiting time, and show how bounded gap variances absorb the Gaussian-replacement cost into the schedule scale.
+**Understanding target:** Explain the controlled replacement of binary source shifts by Gaussian shifts, its trace-distance remainder and the Gaussian-fidelity comparison on the full covariance. Identify the allowed centroid prior as a converse device, not supplied information.
 
-**Dependencies and story role:** Requires M05, M08, M12 and M18–M20. Completes the all-receiver branch with the original nuisance quantifiers intact.
+**Dependencies and story role:** Requires M09–M10 and M12. Builds the all-receiver proof independently of the attaining pair measurement.
 
-**Conceptual connection:** Connects a proof prior to a uniform impossibility result without imposing that prior on the source or the receiver.
+**Conceptual connection:** Connects quantum state closeness, data processing and a tractable Gaussian comparison while preserving temporal correlations.
 
-**Source pointers:** Anchor context: [Tsang §§VIII.A and VIII.J][tsang]; local minimax reduction and closure: [collective converse §§1 and 5](../science/collective-converse.md).
+**Source pointers:** Anchor context: [Tsang §II and Appendix B][tsang]; [collective converse §§1–3](../science/collective-converse.md); [related mathematical tools](../references/related-work.md#6-imported-mathematical-tools).
 
-### M22 — The matching resolution theorem
-
-**Phase:** Narrative/innovation.
-
-**Central question:** What is established when the receiver and the converse produce the same schedule scale?
-
-**Understanding target:** State the fixed-error transition $`\mathcal I(h;v)\asymp1`$ with its bounded-gap assumptions and uniform constants. Explain the role of the marker solving $`\mathcal I(h_*;v)=1`$, and distinguish an optimal order from an exact error-calibrated threshold or an estimation-risk theorem.
-
-**Dependencies and story role:** Requires M17 and M21. Joins both proof branches into the central result before drawing acquisition-specific consequences.
-
-**Conceptual connection:** Connects a practical pair construction and an unrestricted collective bound to the sufficiency of neighboring-pair information in this model.
-
-**Source pointers:** Anchor context: [Tsang §§II and VIII.K][tsang]; [model §§4–5](../science/model-and-theorem.md#4-schedule-information); [receiver §4](../science/receiver.md#4-a-complete-test-and-its-error-guarantee); [collective converse §5](../science/collective-converse.md#5-close-the-minimax-bound).
-
-### M23 — The complete direct-imaging benchmark
+### M18 — Brownian precision closes the timing law
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What is lost when every spatial register is measured in position before further processing?
+**Central question:** How do upper and lower proofs lead to the same function of the supplied gaps?
 
-**Understanding target:** Explain the lower bound for every processing rule using the position record, including contraction after adding the correlated Brownian displacement. Connect independent pair differences and their exact second and fourth moments to an upper bound uniform over all $`q\ge h`$. Translate $`h\asymp N^{-1/2}`$ into physical separation order $`N^{-1/4}`$.
+**Understanding target:** Explain how sparse Brownian precision bounds the covariance resolvent and controls the Gaussian-replacement remainder. Combine this lower bound with the matching receiver to interpret $`\sum_i h^2/(h+v_i)=\Theta(1)`$ as a minimax testing boundary.
 
-**Dependencies and story role:** Requires M02, M04, M07–M08 and M22. Establishes the operational benchmark against which the timing-dependent quantum advantage is interpreted.
+**Dependencies and story role:** Requires M15–M17. Integrates the original receiver and converse into the first complete theorem.
 
-**Conceptual connection:** Connects position shot noise, classical data processing and translation-invariant statistics to a fully matched classical comparison.
+**Conceptual connection:** Connects local gap structure to the best distinguishability of the entire correlated quantum record.
 
-**Source pointers:** Anchor context: [Tsang §§III and VIII.J–K][tsang]; local Brownian benchmark: [direct imaging §§1–5](../science/direct-imaging.md); [model §6](../science/model-and-theorem.md#6-direct-imaging-benchmark).
+**Source pointers:** [Tsang §§II and VIII.K][tsang]; [collective converse §§4–5](../science/collective-converse.md); [uniform timing theorem](../science/model-and-theorem.md#5-uniform-resolution-theorem).
 
-### M24 — Reading the periodic crossover
-
-**Phase:** Narrative/innovation.
-
-**Central question:** How does the gap functional recover the two periodic separation exponents?
-
-**Understanding target:** Connect the periodic quadratic equation for $`h_*`$ to the competition between the motion increment and $`1/N`$. Translate the result into physical separation and arrival spacing, keeping a fixed positive mean interval distinct from a duration held fixed as count grows.
-
-**Dependencies and story role:** Requires M07, M11 and M22. Provides the first transparent acquisition consequence of the general theorem.
-
-**Conceptual connection:** Connects the global testing law to a motion-versus-sampling crossover. The familiar exponents alone do not identify the new all-receiver result.
-
-**Source pointers:** Anchor context: [Tsang §VIII.A][tsang], for the centering issue; local periodic analysis: [timing regimes §1](../science/timing-regimes.md#1-regular-sampling-diffusion-competes-with-the-next-photon); attribution: [related work §2](../references/related-work.md#2-brownian-motion-and-dynamic-source-spade).
-
-### M25 — Equal budgets, different short-gap structure
+### M19 — Which acquisition experiment is being compared?
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How can two schedules with the same count and duration have different resolution orders?
+**Central question:** Which change of timing resources can change the physical-separation exponent?
 
-**Understanding target:** Follow the exact close-doublet construction and the compensating between-doublet gaps. Explain why a fixed fraction of $`1/N`$-scale internal gaps supports $`h\asymp1/N`$ while the common duration grows proportionally to $`N`$.
+**Understanding target:** Compare periodic arrivals, close doublets and fixed-total-duration acquisition at their stated count and duration budgets. Explain why the fixed-count Poisson logarithm is a separate unbounded-gap, average-risk experiment and needs close arrivals to remain addressable.
 
-**Dependencies and story role:** Requires M11, M15, M22 and M24. Demonstrates why count and average rate do not determine the schedule's information by themselves.
+**Dependencies and story role:** Requires M11 and M18. Derives acquisition meaning from the timing law before adding another nuisance.
 
-**Conceptual connection:** Connects invariant relative measurements to controlled acquisition timing. The improvement changes the supplied schedule and requires shrinking actual internal intervals.
+**Conceptual connection:** Connects a mathematical gap list to bandwidth, temporal modes, count stopping and experimental duration.
 
-**Source pointers:** Anchor context: [Tsang §VI.G][tsang]; local construction and resource comparison: [timing regimes §2](../science/timing-regimes.md#2-equal-photon-count-and-duration-at-fixed-mean-rate); [physical interface §5](../science/physical-interface.md#5-what-timing-means).
+**Source pointers:** [Tsang §VI.G and Appendix C][tsang]; [timing regimes](../science/timing-regimes.md); [Poisson experiment](../science/poisson-arrivals.md); [physical interface](../science/physical-interface.md).
 
-### M26 — Which timing constraint changes the exponent?
-
-**Phase:** Narrative/innovation.
-
-**Central question:** How do fixed duration and a positive actual-gap floor alter the doublet comparison?
-
-**Understanding target:** Explain the fixed-duration bound obtained from convexity and why all positive-gap schedules then share the same quantum separation order. Separately explain why a fixed positive floor, together with a fixed upper-gap bound, restores the slower asymptotic order, and why a fixed duration plus a floor limits the possible count.
-
-**Dependencies and story role:** Requires M11 and M22–M25. Resolves the resource qualifications needed to interpret the schedule contrast globally.
-
-**Conceptual connection:** Connects constraints on the sum and minimum of the gaps to different asymptotic experiments; mean rate, total duration and short-gap capability are distinct resources.
-
-**Source pointers:** Anchor context: [Tsang §I and §V][tsang], for photon-budgeted statistical resolution; local constraint analysis: [timing regimes §§3–4](../science/timing-regimes.md#3-a-fixed-total-duration-changes-the-comparison).
-
-### M27 — A random schedule is a new experiment
+### M20 — A jitter scale and a charged calibration source
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What must be specified before averaging the timing law over Poisson arrivals?
+**Central question:** What information does a finite point-source calibration sample actually supply?
 
-**Understanding target:** Define the exact recorded count, the first-photon time origin, the observed exponential gaps and the risk averaged over timestamps. Explain why unbounded gaps require a separate argument and why fixed-count stopping differs from a fixed-duration experiment.
+**Understanding target:** Specify the Gaussian nuisance class $`0\le w\le b`$ and the independent stabilized known-centroid calibration photons with the same variance. Distinguish a bound on an unknown variance, a known actual variance and a measurement of each realized displacement.
 
-**Dependencies and story role:** Requires M06–M08, M11 and M22. Sets up the random-schedule consequence without importing an invalid maximum-gap assumption.
+**Dependencies and story role:** Requires M05–M12 and M18. Defines the joint experiment without silently supplying a trajectory reference.
 
-**Conceptual connection:** Connects conditional quantum states to a joint classical–quantum record. Counting conventions in a weak-light model do not by themselves specify this stopping rule.
+**Conceptual connection:** Connects the independent-jitter sister experiment to the Brownian record while keeping physical noise and uncertainty about it separate.
 
-**Source pointers:** Anchor context: [Tsang §V and Appendix C][tsang]; local experiment: [Poisson arrivals §§1–2 and 7](../science/poisson-arrivals.md); [notation bridge](TSANG_BRIDGE.md).
+**Source pointers:** [Tsang §§VIII.A and VIII.K][tsang]; [joint experiment §§1–2](../science/joint-model.md); [calibration sister](https://github.com/GoGoKo699/Quantum-Imaging-Calibration); [bridge joint extension](TSANG_BRIDGE.md#8-adding-independent-jitter-and-a-finite-calibration-sample).
 
-### M28 — The Poisson logarithm and uniform crossover
-
-**Phase:** Narrative/innovation.
-
-**Central question:** How do rare short gaps produce a logarithm without a worst-schedule guarantee?
-
-**Understanding target:** Connect the resolvent average and the joint gap–outcome affinity to the same factor $`h^2\kappa^{-1}\log(1+\kappa/h)`$. Explain why the converse handles the full exponential distribution, why the receiver still covers every larger separation, and how the root inversion distinguishes fixed positive $`\kappa`$ from $`N\kappa=O(1)`$.
-
-**Dependencies and story role:** Requires M17, M19–M21 and M27. Integrates the random experiment's lower and upper bounds into its complete crossover, including the family-specific meaning of its rate requirement.
-
-**Conceptual connection:** Connects short-gap statistics to finite-error distinguishability. The logarithm comes from the distribution of useful intervals, with the design threshold regularizing the small-gap contribution.
-
-**Source pointers:** Anchor context: [Tsang §VIII.K][tsang]; locally supplied random-schedule proof and inversion: [Poisson arrivals §§3–6 and 8](../science/poisson-arrivals.md); [timing regimes §5](../science/timing-regimes.md#5-relation-to-ideal-poisson-sampling-and-direct-imaging).
-
-### M29 — Translating the result into an optical interface
+### M21 — The relative mode has a three-point source
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Which physical capabilities are required for the stated quantum advantage to apply?
+**Central question:** What remains after the common translation is removed from a doublet?
 
-**Understanding target:** Connect supplied register addressability to spatial-state-preserving capture, delay, routing and nonspatial mode matching. Distinguish an actual minimum gap, timestamp coarsening and overlapping optical pulses. Identify why ideal arbitrarily close Poisson registers do not automatically describe a finite-bandwidth field.
+**Understanding target:** Derive the relative Gaussian variance $`w+v_i/2`$ and source shift that is zero with probability one half and each of $`\pm\sqrt{2q}`$ with probability one quarter. Explain why this differs from the original binary source and why disjoint relative states are independent.
 
-**Dependencies and story role:** Requires M11, M13, M25–M28. Collects the implementation assumptions that determine the meaning and limits of the schedule consequences.
+**Dependencies and story role:** Requires M13–M15 and M20. Finds a centroid-free observation experiment to which the calibration mechanism can validly transfer.
 
-**Conceptual connection:** Connects a statistically optimal abstract measurement to an optical experiment with specified occupancy, coherence and loss resources.
+**Conceptual connection:** Connects two-register spatial coordinates to a new source distribution whose moments carry the joint signal.
 
-**Source pointers:** [Tsang §VI.G and Appendix C][tsang]; [physical interface §§3–6](../science/physical-interface.md); [Poisson arrivals §8](../science/poisson-arrivals.md#8-what-creates-the-logarithm); [receiver §5](../science/receiver.md#5-optical-meaning-and-scope).
+**Source pointers:** Anchor context: [Tsang §VI.G][tsang]; local derivation: [joint relative-mode receiver](../science/joint-receiver.md); [physical interface](../science/physical-interface.md).
 
-### M30 — The contribution as a complete scientific statement
+### M22 — Corrected Hermite–Gaussian moments
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What has the project established, how do its parts support one another, and where does the claim end?
+**Central question:** How can a known, different Brownian gap be removed from each pair's moment formula?
 
-**Understanding target:** Explain the path from the correlated register model through the pair receiver and collective converse to the timing functional, direct-imaging benchmark and acquisition consequences. Separate inherited imaging and mathematical ingredients from the schedule-dependent characterization. Distinguish analytical guarantees, finite numerical corroboration and physical implementation assumptions.
+**Understanding target:** Interpret the conditional HG index law and the corrected observables $`A_i=2Q_i-d_i`$ and $`B_i=(4/3)Q_i(Q_i-1)-4d_iQ_i+d_i^2`$, with $`d_i=v_i/2`$. Explain their common means $`w+q`$ and $`(w+q)^2-q^2/3`$.
 
-**Dependencies and story role:** Integrates M12 and M13–M29. Ends the narrative with the theorem, mechanism, resource tradeoffs, attribution and scope understood as one connected result.
+**Dependencies and story role:** Requires M02–M04 and M21. Supplies the local identities needed for heterogeneous weighted tests.
 
-**Conceptual connection:** Connects the anchor's quantum-imaging perspective to this project's specific conclusion: neighboring-pair information attains the resolution order of the complete Brownian-correlated spatial-register record, while timing resources determine what that order is.
+**Conceptual connection:** Connects spatial moments to observed mode indices; the index measures the relative spatial register's oscillator excitation, not an additional photon resource.
 
-**Source pointers:** Anchor synthesis: [Tsang §§II and X][tsang]; [model §§5–7](../science/model-and-theorem.md#5-uniform-resolution-theorem); [timing regimes](../science/timing-regimes.md); [physical interface](../science/physical-interface.md); [related work §§1–7](../references/related-work.md); [verification limits](../verification/README.md#limits-of-verification).
+**Source pointers:** Anchor context: [Tsang §§VII.A–B][tsang]; exact HG identities and attribution: [joint receiver](../science/joint-receiver.md); [related work](../references/related-work.md).
+
+### M23 — Bound and calibration tests with schedule weights
+
+**Phase:** Narrative/innovation.
+
+**Central question:** How do the receiver's supplied bounds and calibration counts become two different detection routes?
+
+**Understanding target:** Explain inverse-variance weighting of corrected relative moments and why one parity matching retains a fixed fraction of the timing information. Contrast the known-bound threshold with subtracting an independent calibration estimate whose variance is $`O(b/M)`$.
+
+**Dependencies and story role:** Requires M15–M16 and M20–M22. Builds two attaining branches without estimating the Brownian path.
+
+**Conceptual connection:** Connects finite calibration information to physical signal fluctuations; the calibration stream does not inherit the signal's Brownian variance.
+
+**Source pointers:** [Tsang §§VII.A–B and VIII.K][tsang]; [joint receiver](../science/joint-receiver.md); [joint frontier](../science/joint-model.md#3-joint-frontier).
+
+### M24 — A weighted shape statistic removes variance ambiguity
+
+**Phase:** Narrative/innovation.
+
+**Central question:** How can separation remain detectable without enough calibration photons?
+
+**Understanding target:** Explain why a cross-product of distinct corrected moments removes $`(w+q)^2`$ but retains $`-q^2/3`$. Identify the inverse-square gap weights, the normalization excluding diagonal products and the global variance bound that controls every separated alternative.
+
+**Dependencies and story role:** Requires M10 and M21–M23. Establishes the shape branch as a valid uniform test rather than an identifiability heuristic.
+
+**Conceptual connection:** Connects the non-Gaussian fourth cumulant to a measured statistic even when second moments confound separation and jitter.
+
+**Source pointers:** Anchor context: [Tsang §§VII.A–B and VIII.K][tsang]; local weighted-statistic proof: [joint receiver](../science/joint-receiver.md); [joint frontier](../science/joint-model.md#3-joint-frontier).
+
+### M25 — Extracting independent noise from Brownian covariance
+
+**Phase:** Narrative/innovation.
+
+**Central question:** How can a correlated-record converse use an independent-jitter collision calculation?
+
+**Understanding target:** Explain the diagonal covariance extraction from sparse Brownian precision and the positive residual Gaussian translation channel. Identify why the extracted independent experiment is more informative and why neighboring-gap sums retain the schedule dependence.
+
+**Dependencies and story role:** Requires M10, M17–M18 and M20. Opens the joint converse without assuming that the actual signal photons are independent.
+
+**Conceptual connection:** Connects a matrix order relation to a comparison of statistical experiments and a valid transfer boundary between the sister results.
+
+**Source pointers:** Anchor context: [Tsang §II and Appendix B][tsang]; local extraction proof: [joint converse](../science/joint-converse.md); [original Brownian precision proof](../science/collective-converse.md#4-brownian-precision-controls-the-resolvent).
+
+### M26 — Compensated hard worlds and an all-receiver obstruction
+
+**Phase:** Narrative/innovation.
+
+**Central question:** Why may a minimax converse compare a null and alternative with different jitter variances?
+
+**Understanding target:** Describe the admissible comparison $`w_0=b/2`$, $`w_1=w_0-q`$ and exact signal-variance compensation. Explain the signal shape cost and finite-calibration variance cost, while keeping one common variance within each physical world.
+
+**Dependencies and story role:** Requires M08–M10, M20 and M25. Establishes the nuisance lower bound against every joint receiver using the inherited collision identity with its exact conventions.
+
+**Conceptual connection:** Connects composite-hypothesis geometry, channel contraction and the cost of learning an unknown noise scale.
+
+**Source pointers:** [Tsang §§VIII.J–K][tsang]; [joint converse](../science/joint-converse.md); [Calibration collision kernel](https://github.com/GoGoKo699/Quantum-Imaging-Calibration/blob/main/science/collision-kernel.md).
+
+### M27 — The complete joint frontier and classical benchmark
+
+**Phase:** Narrative/innovation.
+
+**Central question:** How do a physical timing floor and three uncertainty routes combine into one matching result?
+
+**Understanding target:** Interpret $`R_Q=r_0+\min\{b,\sqrt{b/M},S_2^{-1/4}\}`$ with its endpoint conventions, uniform constants and fixed local alternative. Explain why the direct-imaging law has no additional schedule dependence under bounded gaps, and why lower bounds and attaining branches describe the same experiment.
+
+**Dependencies and story role:** Requires M18 and M20–M26. Integrates the full quantum construction and converse before interpreting crossover regimes.
+
+**Conceptual connection:** Connects physical noise, finite calibration and shape sensitivity without multiplying pre-existing bounds or replacing noise by a learned parameter.
+
+**Source pointers:** [Tsang §§III–V and VIII.K][tsang]; [joint theorem §§3–4](../science/joint-model.md#3-joint-frontier); [joint converse](../science/joint-converse.md); [joint receiver](../science/joint-receiver.md).
+
+### M28 — Close doublets expose two calibration crossovers
+
+**Phase:** Narrative/innovation.
+
+**Central question:** When does more calibration improve resolution, and when does the physical jitter floor take over?
+
+**Understanding target:** Derive the close-doublet reduction with $`K=NM/(N+M)`$. Distinguish the shape/calibration crossover $`K\asymp\sqrt N`$ from escaping a plateau, which needs $`Kb\gg1`$, and identify when calibration is irrelevant because the ideal photon floor is already reached.
+
+**Dependencies and story role:** Requires M19–M20 and M27. Converts the general theorem into an acquisition design rule with all calibration photons charged.
+
+**Conceptual connection:** Connects short internal Brownian intervals to the uncertainty plateau and shows why a comparable calibration budget reaches the known-jitter order.
+
+**Source pointers:** [Tsang §§VI.G and VIII.K][tsang]; [close-doublet regimes](../science/jitter-calibration-regimes.md#2-close-doublets); [physical floor](../science/jitter-calibration-regimes.md#3-physical-jitter-remains-after-calibration); [timing resources](../science/timing-regimes.md).
+
+### M29 — The receiver capability and its physical boundary
+
+**Phase:** Narrative/innovation.
+
+**Central question:** Which parts of the mathematical receiver must a physical experiment actually supply?
+
+**Understanding target:** Distinguish the spatial SWAP bit, the full relative-HG joint POVM and the four-outcome construction proved for controlled close doublets. Account for addressability, storage, coherent operations, noise matching, all photon counts and the absence of a path monitor; identify limits of finite numerical checks.
+
+**Dependencies and story role:** Requires M09, M11, M19 and M21–M28. Tests the physical interpretation of the entire attaining construction rather than inferring hardware from an abstract POVM.
+
+**Conceptual connection:** Connects the review's weak-light framework to actual temporal and spatial access, while keeping physical jitter after calibration visible.
+
+**Source pointers:** [Tsang §VI.G and Appendix C][tsang]; [physical interface](../science/physical-interface.md); [joint receiver](../science/joint-receiver.md); [verification guide](../verification/README.md).
+
+### M30 — Timing and calibration as one scientific statement
+
+**Phase:** Narrative/innovation.
+
+**Central question:** What has the project established, which ingredients are inherited, and where does the joint claim end?
+
+**Understanding target:** Explain the complete route from correlated Brownian registers to the original timing law and the joint schedule-dependent frontier. Separate physical jitter from uncertainty about its scale, state the calibration source assumptions and distinguish the full general receiver from the close-doublet simplification. Credit the timing and independent-calibration contributions once and keep theorem, finite checks and optical implementation claims distinct.
+
+**Dependencies and story role:** Integrates M12 and M13–M29. Ends the narrative with the result, mechanism, acquisition resources, sister ownership and limitations understood together.
+
+**Conceptual connection:** Connects the anchor's quantum-imaging framework to the project's conclusion: known timing can suppress common motion, while independent physical displacement survives even perfect calibration.
+
+**Source pointers:** Anchor synthesis: [Tsang §§II, VIII.K and X][tsang]; [scientific route](../science/README.md); [joint model §5](../science/joint-model.md#5-ownership-and-reading-route); [regime synthesis](../science/jitter-calibration-regimes.md); [related work](../references/related-work.md); [verification limits](../verification/README.md).
 
 [tsang]: https://arxiv.org/pdf/1906.02064v2

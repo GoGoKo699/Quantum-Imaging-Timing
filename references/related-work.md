@@ -2,7 +2,7 @@
 
 [Model and results](../science/model-and-theorem.md) · [Physical interface](../science/physical-interface.md) · [Bibliography](references.bib)
 
-This comparison concerns literature checked through 29 October 2026. The result developed here characterizes fixed-error one-versus-two resolution for addressable one-photon spatial registers along a common Brownian trajectory. Its central quantity is the known-schedule functional
+The original timing comparison concerns literature checked through 29 October 2026; the joint jitter/calibration comparison below extends its bounded primary-source review to 2 November 2026. The original result characterizes fixed-error one-versus-two resolution for addressable one-photon spatial registers along a common Brownian trajectory. Its central quantity is the known-schedule functional
 
 ```math
 \mathcal I_{\mathbf t}(q)=\sum_{i=2}^N\frac{q^2}{v_i+q},
@@ -11,6 +11,8 @@ v_i=\frac{D(t_i-t_{i-1})}{\sigma^2}.
 ```
 
 The contribution is the matching characterization for all joint quantum receivers and the sufficiency, up to uniform constants, of a suitable matching of neighboring photon pairs. Static quantum superresolution, Brownian penalties for a specified receiver, two-photon comparison, Gaussian fidelity formulas and statistical testing are established ingredients.
+
+The [joint theorem](../science/joint-model.md) additionally gives the schedule-dependent frontier for fresh independent Gaussian jitter of unknown bounded variance and a charged stabilized point-calibration sample. Its new proof steps are diagonal covariance extraction and heterogeneous relative-mode moment correction. Independent-jitter compensation, HG factorial moments and mutual-reference pair measurements retain their earlier attribution.
 
 ## 1. Static quantum imaging and fixed-error testing
 
@@ -42,7 +44,7 @@ Lian, Zhu and Cao's *Quantum Limits of Blind Superresolution Imaging* is a recen
 
 Appendix G explains that unrestricted unknown mixed responses can make different separations exactly indistinguishable, and expressly places shared random-screen correlations outside the independent-copy model. The present response and diffusion law are known, and the common Brownian path is retained in the joint state. Its model therefore differs from both the static-pure identity and the unrestricted-mixed ambiguity. Appendix B.1 also states the nonspatial mode-matching conditions for HOM and the contrast factor for imperfect matching. These conditions are included in the [physical interface](../science/physical-interface.md).
 
-## 5. Related repository model: unknown independent jitter
+## 5. Sister experiment and shared joint result
 
 [Quantum-Imaging-Calibration](https://github.com/GoGoKo699/Quantum-Imaging-Calibration/tree/275c70d6fa9f5a205aab0df35cfe8a7b50aa1635) is compared at commit `275c70d6fa9f5a205aab0df35cfe8a7b50aa1635`. Its [model and results](https://github.com/GoGoKo699/Quantum-Imaging-Calibration/blob/275c70d6fa9f5a205aab0df35cfe8a7b50aa1635/science/model-and-results.md) and [quantum converse](https://github.com/GoGoKo699/Quantum-Imaging-Calibration/blob/275c70d6fa9f5a205aab0df35cfe8a7b50aa1635/science/quantum-converse.md) specify a different statistical experiment. `QuantumImagingCalibration2026`
 
@@ -54,7 +56,15 @@ Appendix G explains that unrestricted unknown mixed responses can make different
 | Input structure | Signal and calibration tensor powers | A correlated mixture of conditional tensor products |
 | Attaining measurement | A fixed four-outcome spatial-mode measurement | Translation-invariant comparisons on neighboring pairs |
 
-Both models use Gaussian location mixtures and fixed-error testing. At uniformly spaced times, a Brownian covariance lower bound can reduce part of a converse to an independent known-jitter problem. The arbitrary-schedule sum, the comparison of different schedules at the same elapsed time, and neighboring-pair sufficiency require the correlated-state analysis. One-photon marginal broadening alone does not identify the two experiments.
+The table compares the original independent-jitter and Brownian-only experiments. Both use Gaussian location mixtures and fixed-error testing, but one-photon marginal broadening alone does not identify them. The adopted sister relationship concerns their explicitly combined experiment, not an equivalence of the two original theorems.
+
+Timing owns the [joint model, theorem](../science/joint-model.md), [correlated-record converse](../science/joint-converse.md) and [relative-mode receiver](../science/joint-receiver.md). Calibration owns the imported [collision kernel at the pinned source revision](https://github.com/GoGoKo699/Quantum-Imaging-Calibration/blob/275c70d6fa9f5a205aab0df35cfe8a7b50aa1635/science/collision-kernel.md), its independent signal/calibration theorem and a self-contained account of the joint consequence. In exact notation, its squared separation and jitter variables are twice the Timing variables. Count the shared result once rather than treating the consequence note as a second proof discovery.
+
+The joint lower bound extracts a diagonal Gaussian covariance from the Brownian path, applies the inherited compensation kernel coordinatewise, and restores the residual correlations through a common channel. The upper bound uses a relative source distribution with an atom at zero and two nonzero atoms; it therefore requires a new gap-corrected moment construction rather than importing the binary-source receiver unchanged. Weighted shape information and the finite calibration budget jointly attain the full known-schedule order. The calibration source is stationary, independent, known-position and same-variance; it supplies no trajectory realization.
+
+Tsang's *Semiparametric estimation for incoherent optical imaging* (2019), Sec. VII.A, Eqs. (7.17)–(7.19), supplies the exact Gaussian HG probabilities and factorial-moment imaging method. These identities, and the general advantage of moment-sensitive measurements, are inherited. The locally derived items are the relative three-point distribution, heterogeneous known-gap correction and weighted statistic with its uniform fixed-error variance bound. [Primary text, arXiv v2](https://arxiv.org/pdf/1906.04578v2), [journal](https://doi.org/10.1103/PhysRevResearch.1.033006). `Tsang2019Semiparametric`
+
+Parniak's mutual-reference mechanism and Schlichtholz's Brownian crossover precedents remain relevant to the combined model. Neither the reappearance of a fourth-root exponent nor knowledge of a noise parameter is claimed as a new mechanism. In particular, finite calibration cannot remove physical independent displacement, and ordinary HOM access is not silently upgraded to the general relative-coordinate HG POVM.
 
 ## 6. Imported mathematical tools
 
@@ -79,6 +89,9 @@ The following records distinguish detailed model checks from bibliographic or ab
 | Muratore et al. (2025) | Published abstract and primary preprint abstract; no full-theorem comparison asserted. |
 | Lian et al. (2026) | Primary preprint v1 Secs. II–III, Appendix B.1 and Appendix G; preprint status retained. |
 | Quantum-Imaging-Calibration | Pinned model/results, quantum converse and related-work account. |
+| Tsang (2019), semiparametric imaging | Primary v2 Secs. III–IV and VII–VIII, including exact HG factorial-moment Eqs. (7.17)–(7.19). Imported as a primary technical ingredient, not a second educational anchor. |
 | Banchi et al.; Fuchs–van de Graaf | Primary records checked for attribution; specialized formulas and conventions are explicitly derived in the project proof. |
 
-The novelty claim is correspondingly specific: a matching arbitrary-schedule resolution law for the stated Brownian-correlated register experiment, together with the sufficiency of neighboring-pair comparisons. It makes no claim to the first motion penalty, the first static reference-free optical receiver, or a full finite-bandwidth optical-field theorem.
+The November joint comparison independently rechecked the primary Brownian-SPADE and two-photon-reference mechanisms and the HG moment identities. Grace's dissertation, [*Quantum Limits and Optimal Receivers for Passive Sub-Diffraction Imaging* (2022)](https://repository.arizona.edu/handle/10150/667290), remains a relevant fast-misalignment comparator whose full text was not accessible for this comparison. The recent Lian preprint and Qian's [*Parameter-Decoupled Quantum Superresolution without Multiparameter Estimation*, arXiv:2609.21796v1](https://arxiv.org/abs/2609.21796v1), were not independently re-audited in full in that extension; earlier detailed or abstract-level comparison extents remain as stated in the source records. No absence-of-prior-work conclusion is inferred from a full-text access gap.
+
+The contribution claim is correspondingly specific: matching arbitrary bounded-schedule resolution laws for the stated Brownian-correlated register experiment, and its combined independent-jitter/calibration extension, with disjoint-pair attainment under the specified access model. It makes no claim to the first motion penalty, static reference-free optical receiver or HG-moment technique, to exhaustive priority certification, or to a complete finite-bandwidth optical-field theorem.

@@ -4,6 +4,8 @@ Two equally bright incoherent point sources move together while photons are coll
 
 The answer depends on the list of arrival gaps. For a known schedule with bounded Brownian increments, one scalar function determines the resolution order. A receiver comparing disjoint adjacent photon pairs attains that order, and a bound on the complete spatial-register state applies to every collective receiver.
 
+This page is the Brownian-only timing experiment. The [joint model](joint-model.md) adds fresh independent jitter of unknown variance and a charged stabilized calibration source. Its fixed local alternative and relative-HG attaining receiver are stated separately, so the unbounded alternative and SWAP apparatus of this theorem retain their original meanings.
+
 ## 1. Optical normalization
 
 The physical amplitude point-spread function of a photon emitted at position $`c`$ is
@@ -43,7 +45,7 @@ The usual stationary Gaussian two-source model is part of the quantum imaging fr
 
 ## 2. Known arrival schedule and hidden motion
 
-Consider $`N\ge2`$ photons with known ordered timestamps $`t_1<\cdots<t_N`$. Each photon occupies a labeled temporal register with the spatial state above. These temporal-register labels are classical information available to the receiver; the emitting-source labels remain hidden.
+Consider $`N\ge2`$ photons with known ordered timestamps $`t_1\lt \cdots\lt t_N`$. Each photon occupies a labeled temporal register with the spatial state above. These temporal-register labels are classical information available to the receiver; the emitting-source labels remain hidden.
 
 The initial dimensionless centroid $`m\in\mathbb R`$ is unknown and unrestricted. Write
 
@@ -63,7 +65,7 @@ The gap variances $`v=(v_2,\ldots,v_N)`$ are known and satisfy
 \qquad i=2,\ldots,N,
 ```
 
-for a fixed finite $`V>0`$. With the physical Brownian convention
+for a fixed finite $`V\gt 0`$. With the physical Brownian convention
 $`\mathbb E[(c(t)-c(u))^2]=2D|t-u|`$, these variances are
 
 ```math
@@ -87,7 +89,7 @@ All statements below are conditional on the supplied deterministic schedule. The
 
 ## 3. Receiver and testing risk
 
-The receiver knows $`N,v,\sigma`$ and a proposed threshold $`h>0`$. It may perform any joint quantum measurement on all spatial registers, use independent ancillas, store photons, or implement adaptive processing. It has no access to the hidden trajectory, source labels, or an environment revealing them.
+The receiver knows $`N,v,\sigma`$ and a proposed threshold $`h\gt 0`$. It may perform any joint quantum measurement on all spatial registers, use independent ancillas, store photons, or implement adaptive processing. It has no access to the hidden trajectory, source labels, or an environment revealing them.
 
 The hypotheses are
 
@@ -135,7 +137,7 @@ This sum includes all adjacent gaps. A disjoint-pair receiver can retain at leas
 
 ## 5. Uniform resolution theorem
 
-**Theorem.** Fix $`V>0`$ and $`q_0>0`$. For every $`N\ge2`$, every known schedule $`0<v_i\le V`$, and every threshold $`0<h\le q_0`$,
+**Theorem.** Fix $`V\gt 0`$ and $`q_0\gt 0`$. For every $`N\ge2`$, every known schedule $`0\lt v_i\le V`$, and every threshold $`0\lt h\le q_0`$,
 
 ```math
 \frac12\left[1-3(V+q_0)\mathcal I(h;v)
