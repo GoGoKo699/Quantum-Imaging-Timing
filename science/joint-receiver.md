@@ -35,7 +35,7 @@ This three-point distribution has variance $`q`$ and fourth cumulant $`-q^2`$. I
 For a relative displacement $`X_i=x`$, the HG mode index satisfies the established Gaussian overlap identity
 
 ```math
-Q_i\mid X_i=x\sim\operatorname{Poisson}(x^2/2).
+Q_i\mid X_i=x\sim\mathrm{Poisson}(x^2/2).
 ```
 
 Here $`Q_i`$ counts oscillator excitation of the supplied transverse spatial register, not additional photons. Resolving its mode index consumes the same two input photons. The HG factorial-moment identity and its imaging use are inherited from [Tsang's semiparametric analysis](https://arxiv.org/pdf/1906.04578v2), Eqs. (7.17)–(7.19).
@@ -65,7 +65,7 @@ Poisson factorial moments give the exact identities
 The means have no unknown gap dependence. The exact first variance, writing $`t=d_i+w+q`$, is
 
 ```math
-\operatorname{Var}(A_i)=2t+2t^2-q^2\le C t.
+\mathrm{Var}(A_i)=2t+2t^2-q^2\le C t.
 ```
 
 All constants below depend only on the fixed bounded parameter ranges. For $`1\le k\le4`$, the source moments $`\mathbb E R_i^{2k}=2^{k-1}q^k`$ are no larger than the corresponding Gaussian moments of variance $`q`$. Gaussian convolution consequently gives $`\mathbb E X_i^{2k}\le(2k-1)!!t^k`$. Using
@@ -77,15 +77,15 @@ All constants below depend only on the fixed bounded parameter ranges. For $`1\l
 and $`d_i\le t`$ shows
 
 ```math
-\operatorname{Var}(A_i)\le C(b+d_i+q),\qquad
-\operatorname{Var}(B_i)\le C(b+d_i+q)^2.
+\mathrm{Var}(A_i)\le C(b+d_i+q),\qquad
+\mathrm{Var}(B_i)\le C(b+d_i+q)^2.
 ```
 
 The calibration HG index satisfies
 
 ```math
 \mathbb E(2Q_c)=w,\qquad
-\operatorname{Var}(2Q_c)=2w+2w^2\le Cw.
+\mathrm{Var}(2Q_c)=2w+2w^2\le Cw.
 ```
 
 Thus $`2\overline Q_c`$ estimates the variance with mean-square error at most $`Cb/M`$. No signal Brownian variance is charged to this stationary calibration source, and no realized signal jitter is inferred.
@@ -110,7 +110,7 @@ For every actual alternative $`q\ge h`$,
 ```math
 b+d_i+q\le\frac qh(b+d_i+h),
 \qquad
-\operatorname{Var}\!\left(\sum_i\lambda_i A_i\right)
+\mathrm{Var}\!\left(\sum_i\lambda_i A_i\right)
 \le\frac{Cq}{hZ_h}.
 ```
 
@@ -183,7 +183,7 @@ To bound variance write $`A_i=\mu+\xi_i`$, with centered independent $`\xi_i`$. 
 They are uncorrelated. The weighted $`B`$ variance is at most $`C(\tau^4+q^2P_2)`$. The linear variance is at most $`C(b+q)^2(A_3+qP_2)`$, and the degenerate variance at most $`C(A_3+qP_2)^2`$. Expanding these terms and applying the displayed bounds, with bounded $`b,q`$, gives
 
 ```math
-\boxed{\operatorname{Var}(T)\le C(\tau^4+q^2\tau^2)}
+\boxed{\mathrm{Var}(T)\le C(\tau^4+q^2\tau^2)}
 ```
 
 for every $`0\le q\le q_0`$. Covariance with the weighted $`B`$ term is absorbed by Cauchy–Schwarz. In particular, the bound is valid even when $`q`$ is much larger than $`b`$.

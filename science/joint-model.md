@@ -20,7 +20,7 @@ The physical intensity variance is $`\sigma^2`$. There are $`N`$ labeled signal 
 m+B_i+J_i+S_i\sqrt q.
 ```
 
-Here $`m\in\mathbb R`$ is unrestricted and unknown; $`B_1=0`$ and $`B_i-B_{i-1}\sim\mathcal N(0,v_i)`$ are independent known Brownian increments; $`S_i`$ are independent fair signs; and $`J_i\sim\mathcal N(0,w)`$ are fresh independent jitters. All variables are independent except the common Brownian temporal correlations. Under the convention $`\operatorname{Var}[C(t)-C(u)]=2D|t-u|`$,
+Here $`m\in\mathbb R`$ is unrestricted and unknown; $`B_1=0`$ and $`B_i-B_{i-1}\sim\mathcal N(0,v_i)`$ are independent known Brownian increments; $`S_i`$ are independent fair signs; and $`J_i\sim\mathcal N(0,w)`$ are fresh independent jitters. All variables are independent except the common Brownian temporal correlations. Under the convention $`\mathrm{Var}[C(t)-C(u)]=2D|t-u|`$,
 
 ```math
 v_i=\frac{D(t_i-t_{i-1})}{\sigma^2},\qquad
@@ -65,9 +65,9 @@ The quantum minimax risk is
 ```math
 \mathcal R_Q(h;v,N,M,b)
 =\inf_{0\le E\le I}\max\left\{
-\sup_{m,w}\operatorname{Tr}(E\Omega_{0,w,m}^{v}),\;
+\sup_{m,w}\mathrm{Tr}(E\Omega_{0,w,m}^{v}),\;
 \sup_{m,w,\ h\le q\le q_0}
-\operatorname{Tr}[(I-E)\Omega_{q,w,m}^{v}]
+\mathrm{Tr}[(I-E)\Omega_{q,w,m}^{v}]
 \right\}.
 ```
 

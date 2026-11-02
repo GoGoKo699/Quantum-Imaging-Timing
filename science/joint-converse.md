@@ -9,7 +9,7 @@ The joint frontier has a physical floor and a nuisance-variance obstruction. The
 Suppose the actual independent jitter variance $`w`$ is known. Use the same Gaussian prior $`m\sim\mathcal N(0,V)`$ for the unrestricted initial centroid as in the [original converse](collective-converse.md). Its Brownian displacement covariance is
 
 ```math
-C=L\operatorname{diag}(V,v_2,\ldots,v_N)L^{\mathsf T}.
+C=L\mathrm{diag}(V,v_2,\ldots,v_N)L^{\mathsf T}.
 ```
 
 Let $`\bar\rho_q`$ denote the prior-averaged signal state; the identical calibration factors may be omitted from state-distance comparisons. The averaged null Gaussian spatial state has displacement covariance $`C+wI`$. Replacing each binary source shift $`\pm\sqrt q`$ by an independent Gaussian of variance $`q`$ gives the comparison state with covariance $`C+(w+q)I`$. The original trace-norm replacement estimate still gives
@@ -25,11 +25,11 @@ The same Gaussian fidelity calculation and Brownian precision argument, now with
 
 ```math
 T(G_{C+wI},G_{C+(w+q)I})^2
-\le\frac{q^2}{2}\operatorname{tr}(C+(w+q)I)^{-1},
+\le\frac{q^2}{2}\mathrm{tr}(C+(w+q)I)^{-1},
 ```
 
 ```math
-\operatorname{tr}(C+(w+q)I)^{-1}
+\mathrm{tr}(C+(w+q)I)^{-1}
 \le2\sum_{i=1}^{N}\frac1{u_i+w+q},
 \qquad u_1=V,\quad u_i=v_i\ (i\ge2).
 ```
@@ -83,7 +83,7 @@ Define
 c_i=\left[2\left(\frac1{u_i}+\frac1{u_{i+1}}\right)\right]^{-1}.
 ```
 
-Order reversal under inversion gives $`C\succeq\operatorname{diag}(c_i)`$. Therefore the prior-averaged correlated signal is a Gaussian displacement channel of positive covariance $`C-\operatorname{diag}(c_i)`$ applied to independent signal registers whose Gaussian noises have variances $`c_i+w`$. The channel is independent of $`q,w`$ and acts only on signal registers. Calibration remains the original stationary point source of noise variance $`w`$.
+Order reversal under inversion gives $`C\succeq\mathrm{diag}(c_i)`$. Therefore the prior-averaged correlated signal is a Gaussian displacement channel of positive covariance $`C-\mathrm{diag}(c_i)`$ applied to independent signal registers whose Gaussian noises have variances $`c_i+w`$. The channel is independent of $`q,w`$ and acts only on signal registers. Calibration remains the original stationary point source of noise variance $`w`$.
 
 For $`i\lt N`$, $`c_i`$ lies between one quarter and one half of $`\min(u_i,u_{i+1})`$; $`c_N=u_N/2`$. Hence, for $`p=1,2`$,
 
@@ -115,7 +115,7 @@ The divergence is defined by the weighted operator
 
 ```math
 \chi^2_{1/2}(\rho\Vert\tau)
-=\operatorname{Tr}\!\left[(\tau^{-1/4}\rho\tau^{-1/4})^2\right]-1.
+=\mathrm{Tr}\!\left[(\tau^{-1/4}\rho\tau^{-1/4})^2\right]-1.
 ```
 
 The cited proof constructs the positive trace-class weighted integral, justifies its inverse-operator domains and proves both tensor factorization and $`T(\rho,\tau)\le\tfrac12\sqrt{\chi^2_{1/2}(\rho\Vert\tau)}`$. A bounded inverse is not assumed. Its local estimates for $`|z|\le1/2`$ are

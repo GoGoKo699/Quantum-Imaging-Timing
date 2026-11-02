@@ -290,7 +290,7 @@ The orthogonal center/relative spatial-coordinate transformation on a pair leave
 
 ```math
 X_i=G_i+R_i,\qquad
-\operatorname{Var}G_i=w+d_i,\qquad d_i=\frac{v_i}{2},
+\mathrm{Var}G_i=w+d_i,\qquad d_i=\frac{v_i}{2},
 ```
 
 ```math
@@ -303,7 +303,7 @@ The three-point source shift is essential: a pair with equal source signs has no
 For an HG mode index $`Q_i`$ matched to the relative reference wave packet,
 
 ```math
-Q_i\mid X_i\sim\operatorname{Poisson}(X_i^2/2).
+Q_i\mid X_i\sim\mathrm{Poisson}(X_i^2/2).
 ```
 
 This is the spatial oscillator excitation of one occupied relative register. It is not an additional photon count. The moment viewpoint connects to the anchor's Sections VII.A–B; the exact Gaussian/HG factorial identities and their primary attribution are supplied in the [joint receiver](../science/joint-receiver.md).
