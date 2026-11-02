@@ -1,8 +1,8 @@
-# From Tsang's imaging model to the Brownian timing theorem
+# From Tsang's imaging model to timing, jitter and calibration
 
 **Background anchor:** Mankei Tsang, [*Resolving starlight: a quantum perspective*](https://arxiv.org/pdf/1906.02064v2), *Contemporary Physics* **60**, 279–298 (2019), [doi:10.1080/00107514.2020.1736375](https://doi.org/10.1080/00107514.2020.1736375). Section and equation references below use the accepted arXiv version 2, revised 25 February 2020.
 
-The bridge develops the project's normalization, correlated state and testing problem from the one-photon imaging framework. The Brownian schedule theorem is established in the linked [project proofs](../science/README.md). The review supplies the background framework; it does not establish that theorem.
+The bridge develops the project's normalization, correlated state and testing problem from the one-photon imaging framework. It first reaches the Brownian schedule theorem, then adds independent jitter and a finite calibration sample to reach the joint frontier. The review supplies the background framework; the linked [project proofs](../science/README.md) establish these testing results.
 
 ## 1. Source map
 
@@ -11,6 +11,7 @@ The bridge develops the project's normalization, correlated state and testing pr
 | Sections III–V; Eqs. (3.1), (4.1), (5.3)–(5.8) | Direct imaging, spatial modes and Fisher information | The distinction between a spatial quantum state and its position-measurement data |
 | Section VI.G; Section VIII.A | Two-photon measurements and centroid alignment | The translation-invariant pair receiver |
 | Sections VIII.J–K; Appendices A–B | Estimator bias, hypothesis testing and quantum measurement bounds | A uniform fixed-error criterion |
+| Sections VII.A–B | Spatial moments and mode measurements | The relative-mode moment viewpoint; exact corrected observables are derived locally |
 | Appendix C; Eqs. (C7)–(C14) | Thermal temporal modes and the one-photon state | The precise conditional state and the optical interface |
 
 The relevant physical setting is one-dimensional paraxial incoherent imaging. The Gaussian formulas below are the project's explicit specialization of the review's general amplitude response $`\psi`$.
@@ -64,6 +65,8 @@ The spatial oscillator state $`|0\rangle`$ here describes the shape of **one pho
 | $`N=M\epsilon`$ in Appendix C | An expected photon count, denoted $`\bar N`$ here. The project conditions on exactly $`N`$ supplied photon registers. |
 | $`\sigma`$ in Appendix C | A thermal density operator. It is unrelated to the project's scalar PSF width $`\sigma`$. Write the thermal operator as $`\tau_\epsilon`$ below. |
 | Centered object in Section V; centroid issue in VIII.A | An unrestricted initial dimensionless centroid $`m`$ and subsequent hidden Brownian displacements. |
+| Spatial moment viewpoint in Sections VII.A–B | In the joint model, independent photon jitter has dimensionless variance $`w`$, with supplied bound $`b`$. These are different from the common Brownian gap variances $`v_i`$. |
+| Photon counts | The joint model counts $`N`$ signal photons and $`M`$ calibration photons. The calibration sister uses $`q_{\mathrm{cal}}=2q`$ and $`b_{\mathrm{cal}}=2b`$; compare exact conventions before transferring a result. |
 
 These conversions fix all factors of two in the [canonical model](../science/model-and-theorem.md). In particular, physical source offsets $`\pm s/2`$ become dimensionless offsets $`\pm\sqrt q`$.
 
@@ -212,11 +215,11 @@ H^2(\mathrm{Ber}(0),\mathrm{Ber}(p_0(q)))
 =1-\sqrt{1-p_0(q)}=\frac q4+O(q^2).
 ```
 
-For $`M`$ independent zero-motion pairs, an any-antisymmetric-event decision has type-I error zero and type-II error $`[1-p_0(q)]^M`$. Its fixed-error scale is $`Mq=\Theta(1)`$. Since $`N=2M`$, this means $`s/\sigma=\Theta(N^{-1/2})`$. This is a limiting example for intuition; the main deterministic theorem states strictly positive gaps.
+For $`n`$ independent zero-motion pairs, an any-antisymmetric-event decision has type-I error zero and type-II error $`[1-p_0(q)]^n`$. Its fixed-error scale is $`nq=\Theta(1)`$. Since $`N=2n`$, this means $`s/\sigma=\Theta(N^{-1/2})`$. This is a limiting example for intuition; the main deterministic theorem states strictly positive gaps.
 
 ### A positive Brownian increment
 
-For $`v>0`$,
+For $`v\gt 0`$,
 
 ```math
 p_v(0)=\frac{1-(1+v)^{-1/2}}2\gt 0,
@@ -240,7 +243,7 @@ The expansion on the last line is for fixed positive $`v`$; it is not uniform do
 H^2\asymp\frac{q^2}{v+q}
 ```
 
-on the stated bounded parameter ranges. A fixed positive $`v`$ gives a null background and eventually the scale $`Mq^2=\Theta(1)`$, hence separation order $`N^{-1/4}`$. The background is not an absolute resolution floor: collecting more independent pairs still improves resolution.
+on the stated bounded parameter ranges. A fixed positive $`v`$ gives a null background and eventually the scale $`nq^2=\Theta(1)`$, hence separation order $`N^{-1/4}`$. The background is not an absolute resolution floor: collecting more independent pairs still improves resolution.
 
 For a concrete comparison, set $`q=0.01`$, or $`s=0.282843\sigma`$:
 
@@ -271,12 +274,87 @@ Together the quantum upper and lower bounds yield
 \mathcal I(h;v)=\sum_{i=2}^{N}\frac{h^2}{v_i+h}\asymp1
 ```
 
-as the fixed-error boundary for $`0<v_i\le V`$ and $`0<h\le q_0`$. This is the bridge's destination. For regular gaps it gives the diffusion crossover; for controlled doublets it quantifies the benefit of short internal intervals. Those consequences are worked out in [timing-regimes.md](../science/timing-regimes.md).
+as the fixed-error boundary for $`0\lt v_i\le V`$ and $`0\lt h\le q_0`$. This is the bridge's first destination. For regular gaps it gives the diffusion crossover; for controlled doublets it quantifies the benefit of short internal intervals. Those consequences are worked out in [timing-regimes.md](../science/timing-regimes.md).
 
 The [fixed-count Poisson result](../science/poisson-arrivals.md) needs a further argument because its gaps have unbounded support. Its proof works with the joint timestamp-and-quantum experiment and average risk. Integrating the nonzero-threshold pair information produces $`\log(1+\kappa/h)`$. Formally averaging the zero-threshold pair Fisher information would instead encounter the divergent integral $`\mathbb E(1/v)`$ and would not prove that finite-error statement.
 
-## 8. Where the bridge stops
+## 8. Adding independent jitter and a finite calibration sample
 
-The exact claims concern a known Gaussian response, known diffusion, equal independent source labels, unrestricted initial centroid, and supplied spatial registers with known timestamps. A finite-bandwidth field model, unresolved timestamps, an uncertain diffusion coefficient, imperfect interference, or a trajectory-reference stream changes the statistical experiment. The [physical interface](../science/physical-interface.md) distinguishes those changes and the resources needed to realize the pair receiver.
+The common Brownian path and fresh per-photon jitter are different noises. In the joint model, signal register $`i`$ has center $`m+B_i+J_i+S_i\sqrt q`$, with independent $`J_i\sim N(0,w)`$ and a supplied bound $`0\le w\le b`$. Even photons with nearly identical arrival times retain independent $`J_i`$ values. Knowing their common variance does not reveal these values.
+
+The calibration source must be specified before its photons can be used. Here it is an externally stabilized point at known coordinate zero, with the same real Gaussian PSF and the same unknown jitter variance. Its $`M`$ jitter realizations are independent of one another and of the complete signal experiment. It supplies no Brownian path information. A co-moving reference, mismatched noise transfer or an unknown calibration centroid would define another task. The [joint model](../science/joint-model.md) states the entire experiment and its fixed local alternative $`h\le q\le q_0`$, with $`q_0\le1/4`$.
+
+### The pair reference removes common translation, not independent jitter
+
+The orthogonal center/relative spatial-coordinate transformation on a pair leaves its relative mode with displacement
+
+```math
+X_i=G_i+R_i,\qquad
+\mathrm{Var}G_i=w+d_i,\qquad d_i=\frac{v_i}{2},
+```
+
+```math
+\Pr(R_i=0)=\frac12,\qquad
+\Pr(R_i=\sqrt{2q})=\Pr(R_i=-\sqrt{2q})=\frac14.
+```
+
+The three-point source shift is essential: a pair with equal source signs has no relative source displacement. Its fourth cumulant is $`-q^2`$, while the Gaussian displacement contributes zero fourth cumulant. Disjoint selected pairs have independent relative states because their internal Brownian increments, jitters and source signs are disjoint. The discarded absolute pair positions may remain correlated.
+
+For an HG mode index $`Q_i`$ matched to the relative reference wave packet,
+
+```math
+Q_i\mid X_i\sim\mathrm{Poisson}(X_i^2/2).
+```
+
+This is the spatial oscillator excitation of one occupied relative register. It is not an additional photon count. The moment viewpoint connects to the anchor's Sections VII.A–B; the exact Gaussian/HG factorial identities and their primary attribution are supplied in the [joint receiver](../science/joint-receiver.md).
+
+### Correct known gap noise before combining pairs
+
+The observed quantities
+
+```math
+A_i=2Q_i-d_i,\qquad
+B_i=\frac43Q_i(Q_i-1)-4d_iQ_i+d_i^2
+```
+
+have means $`\mu=w+q`$ and $`\mu^2-q^2/3`$. The first mean exposes the ambiguity: separation and unknown jitter both increase a second moment. Products of independent $`A_i`$ observations estimate $`\mu^2`$; subtracting them from the corrected fourth moment isolates the non-Gaussian source shape. The [weighted construction](../science/joint-receiver.md) excludes diagonal products, retains their normalization and controls the variance throughout the separated alternative.
+
+Calibration gives another route. Its HG index has $`\mathbb E(2Q_c)=w`$ and variance of order $`w`$ on the bounded parameter range. Subtracting a finite calibration estimate therefore costs $`O(b/M)`$ variance, rather than making the signal jitter disappear. Known gap corrections let the same reasoning work when different selected pairs have different Brownian variances.
+
+### The joint destination and its physical meaning
+
+For the known bounded schedule define $`r_0`$ and $`S_2`$ by
+
+```math
+\sum_{i=2}^{N}\frac{r_0^2}{b+v_i+r_0}=1,
+\qquad
+S_2=\sum_{i=2}^{N}(b+v_i)^{-2}.
+```
+
+The joint quantum boundary in squared separation is
+
+```math
+R_Q=r_0+\min\left\{b,\sqrt{b/M},S_2^{-1/4}\right\}.
+```
+
+The calibration branch is omitted at $`M=0`$; at $`b=0`$ the minimum is defined to be zero. The first term is the physical timing/jitter floor. The minimum selects between a supplied uncertainty bound, finite calibration and shape information. The complete [joint theorem](../science/joint-model.md#3-joint-frontier) specifies uniform constants and nonempty alternatives; the [converse](../science/joint-converse.md) must still rule out collective processing of the original correlated record. Pair moments alone would not establish optimality.
+
+With close doublets of internal Brownian variance $`O(N^{-1})`$, this becomes
+
+```math
+R_Q=N^{-1}+\min\left\{b,\sqrt{b/L}\right\},\qquad
+L=\max\{\sqrt N,K\},\qquad K=\frac{NM}{N+M}.
+```
+
+For example, $`N=10^8`$ and $`b=10^{-6}`$ put the uncalibrated experiment in a $`q\asymp b`$ plateau. Escaping parametrically below that scale needs $`K\gg10^6`$; merely reaching $`K\asymp\sqrt N=10^4`$ does not suffice. Comparable signal/calibration counts reach the order $`q\asymp10^{-7}`$, while the zero-jitter order is $`10^{-8}`$. These are order proxies, not exact risk thresholds.
+
+Even with arbitrarily many calibration photons the close-doublet order remains $`q_*\asymp N^{-1}+\sqrt{b/N}`$. The ideal physical-separation law $`s_*\asymp\sigma N^{-1/2}`$ requires the physical jitter itself to be $`O(N^{-1})`$. Learning a variance never learns each signal photon's random displacement.
+
+The general construction uses a genuine joint relative-coordinate POVM and full HG index resolution. Controlled close doublets also admit a four-outcome relative-HG construction. Neither apparatus is supplied merely by observing an ordinary SWAP-parity bit; the [physical interface](../science/physical-interface.md) records the access distinction.
+
+## 9. Where the bridge stops
+
+
+The original timing claims concern a known Gaussian response, known diffusion, equal independent source labels, unrestricted initial centroid, and supplied spatial registers with known timestamps. The joint theorem additionally specifies a bounded Gaussian jitter-variance class and independent stabilized point calibration with matching noise transfer; its arbitrary-schedule statement assumes bounded positive Brownian gaps. A finite-bandwidth field model, unresolved timestamps, an uncertain diffusion coefficient, imperfect interference, or a trajectory-reference stream changes the statistical experiment. The [physical interface](../science/physical-interface.md) distinguishes those changes and the resources needed to realize the pair receiver.
 
 The [milestone map](MILESTONES.md) organizes the background and local derivations into a complete route through the project. The review is the single background anchor for that route. Attribution for static superresolution, two-photon interference, Gaussian fidelity and the other inherited tools remains in [related work](../references/related-work.md) and the [bibliography](../references/references.bib).

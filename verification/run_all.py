@@ -19,7 +19,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true", help="replace verification/results.json with this run")
     args = parser.parse_args()
-    scripts = ("verify_converse.py", "verify_receiver.py")
+    scripts = ("verify_converse.py", "verify_receiver.py", "verify_joint.py")
     results = {}
     for name in scripts:
         completed = subprocess.run(

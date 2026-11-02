@@ -8,7 +8,7 @@ v_i=\frac{D\Delta t_i}{\sigma^2},\qquad
 q=\frac{s^2}{8\sigma^2},\qquad s_h=\sqrt{8h}\,\sigma.
 ```
 
-For $`0<v_i\le V`$ and design thresholds $`0<h\le q_0`$, small $`I_N`$ prevents reliable testing even with an arbitrary collective receiver, whereas sufficiently large $`I_N`$ is attained by the [pair receiver](receiver.md). All fixed-error constants depend on the prescribed error and the fixed model bounds. Solving $`I_N(h;v)=1`$ below provides a convenient **information-scale marker**, not an exact error-calibrated resolution.
+For $`0\lt v_i\le V`$ and design thresholds $`0\lt h\le q_0`$, small $`I_N`$ prevents reliable testing even with an arbitrary collective receiver, whereas sufficiently large $`I_N`$ is attained by the [pair receiver](receiver.md). All fixed-error constants depend on the prescribed error and the fixed model bounds. Solving $`I_N(h;v)=1`$ below provides a convenient **information-scale marker**, not an exact error-calibrated resolution.
 
 The acquisition times are a resource in this statement. The most consequential comparison uses the same photon count and the same total duration at each $`N`$: regular arrivals can have separation order $`N^{-1/4}`$, while controlled close doublets have order $`N^{-1/2}`$. The doublets pay for that improvement through shrinking internal gaps. Holding the total duration fixed as $`N`$ grows gives a different conclusion.
 
@@ -39,7 +39,7 @@ The regimes are:
 
 | Sampling regime | Motion increment | Separation order |
 | --- | --- | --- |
-| Fixed positive gap | $`v_N=v>0`$ | $`N^{-1/4}`$ |
+| Fixed positive gap | $`v_N=v\gt 0`$ | $`N^{-1/4}`$ |
 | Crossover | $`v_N=\Theta(N^{-1})`$ | $`N^{-1/2}`$, with a motion-dependent constant |
 | Faster regular sampling | $`v_N=o(N^{-1})`$ | $`N^{-1/2}`$ |
 
@@ -57,7 +57,7 @@ Brownian degradation of separation sensitivity and the $`N^{-1/4}`$ versus $`N^{
 
 ## 2. Equal photon count and duration at fixed mean rate
 
-Fix $`\kappa>0`$ and an even photon count $`N=2M\ge4`$. Compare two schedules with the identical dimensionless duration
+Fix $`\kappa\gt 0`$ and an even photon count $`N=2M\ge4`$. Compare two schedules with the identical dimensionless duration
 
 ```math
 B_N:=\sum_{i=2}^{N}v_i=(N-1)\kappa,
@@ -82,7 +82,7 @@ s_{\rm res}^{\rm reg}/\sigma=\Theta(N^{-1/4}).
 
 ### Doublet schedule
 
-Fix $`b>0`$. For sufficiently large even $`N`$ so that $`b/N\le\kappa`$, put the photons into $`M`$ doublets. Their $`M`$ internal gaps have variance
+Fix $`b\gt 0`$. For sufficiently large even $`N`$ so that $`b/N\le\kappa`$, put the photons into $`M`$ doublets. Their $`M`$ internal gaps have variance
 
 ```math
 u_N=\frac bN.
@@ -107,7 +107,7 @@ I_N^{\rm dbl}(h)
  =M\frac{h^2}{u_N+h}+(M-1)\frac{h^2}{w_N+h}.
 ```
 
-At $`h=a/N`$ with fixed $`a>0`$, the internal-pair contribution is exactly
+At $`h=a/N`$ with fixed $`a\gt 0`$, the internal-pair contribution is exactly
 
 ```math
 M\frac{(a/N)^2}{(b+a)/N}=\frac{a^2}{2(a+b)},
@@ -177,7 +177,7 @@ u_N=\max\{b/N,v_{\min}\},\qquad 0\lt v_{\min}\lt \kappa,
 
 and choosing $`w_N`$ from the same exact-duration equation preserves the comparison. The shrinking-gap regime ends near $`N=b/v_{\min}`$. Beyond it the internal gaps are fixed, and the asymptotic separation order returns to $`N^{-1/4}`$.
 
-In physical units a minimum spacing $`\delta_{\min}>0`$ gives $`v_{\min}=D\delta_{\min}/\sigma^2`$. If the total duration is also fixed, the constraints allow only $`N-1\le T/\delta_{\min}`$ intervals; an unlimited-$`N`$ asymptotic sequence is then infeasible.
+In physical units a minimum spacing $`\delta_{\min}\gt 0`$ gives $`v_{\min}=D\delta_{\min}/\sigma^2`$. If the total duration is also fixed, the constraints allow only $`N-1\le T/\delta_{\min}`$ intervals; an unlimited-$`N`$ asymptotic sequence is then infeasible.
 
 A minimum actual spacing, detector dead time, discarded detections, finite temporal-mode width, and rounded timestamps are different experimental changes. This calculation concerns a floor on the **actual supplied intervals**. It does not identify those other changes with this floor; see [physical-interface.md](physical-interface.md).
 

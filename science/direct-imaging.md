@@ -14,7 +14,7 @@ Z_i=m+B_i+\sqrt q S_i+\varepsilon_i,
 \varepsilon_i\sim\mathcal N(0,1/2),
 ```
 
-where the $`\varepsilon_i`$ and fair source signs $`S_i`$ are independent of each other and of the Brownian increments. The initial centroid $`m\in\mathbb R`$ is unrestricted and the known schedule satisfies $`0<v_i\le V`$.
+where the $`\varepsilon_i`$ and fair source signs $`S_i`$ are independent of each other and of the Brownian increments. The initial centroid $`m\in\mathbb R`$ is unrestricted and the known schedule satisfies $`0\lt v_i\le V`$.
 
 For a randomized decision rule $`\phi(Z_1,\ldots,Z_N)\in[0,1]`$, define
 
@@ -103,7 +103,7 @@ Y_j=G_j+\sqrt q\,(S_{2j}-S_{2j-1}),
 G_j\sim\mathcal N(0,w_j).
 ```
 
-The pair differences are independent: they use disjoint shot-noise variables, source signs and within-pair Brownian increments. They can have different known $`w_j`$, with $`1<w_j\le1+V`$.
+The pair differences are independent: they use disjoint shot-noise variables, source signs and within-pair Brownian increments. They can have different known $`w_j`$, with $`1\lt w_j\le1+V`$.
 
 The source-sign difference is zero with probability $`1/2`$ and $`\pm2`$ with probability $`1/4`$ each. Its second and fourth moments are $`2`$ and $`8`$. Consequently
 
@@ -158,7 +158,7 @@ For any actual $`q\ge h`$, the distance from the alternative mean to the thresho
 \end{aligned}
 ```
 
-The bound is uniform as $`q\to\infty`$; no bounded-alternative assumption is required. In particular, for a design threshold $`0<h\le q_0`$,
+The bound is uniform as $`q\to\infty`$; no bounded-alternative assumption is required. In particular, for a design threshold $`0\lt h\le q_0`$,
 
 ```math
 \boxed{\displaystyle

@@ -15,7 +15,7 @@ v_i=\frac{D}{\sigma^2}(t_i-t_{i-1}),\qquad
 v_i\overset{\rm iid}{\sim}\mathrm{Exp}(\text{mean }\kappa),\quad i=2,\ldots,N.
 ```
 
-Here $`D>0`$, $`\lambda>0`$, and the intensity point-spread function has physical variance $`\sigma^2`$. The separation parameter remains $`q=s^2/(8\sigma^2)`$. The time between the first and last recorded photons has mean $`n/\lambda`$ and no deterministic upper bound.
+Here $`D\gt 0`$, $`\lambda\gt 0`$, and the intensity point-spread function has physical variance $`\sigma^2`$. The separation parameter remains $`q=s^2/(8\sigma^2)`$. The time between the first and last recorded photons has mean $`n/\lambda`$ and no deterministic upper bound.
 
 A receiver may use all timestamps and all photon spatial registers jointly. For a test $`\phi`$, with rejection denoted by $`\phi=1`$, define
 
@@ -29,7 +29,7 @@ R_N^{\rm Pois}(h;\phi)
 
 Let $`R_N^{\rm Pois,*}(h)`$ be the infimum over all permitted receivers. This is an average risk for the joint timestamp-and-photon experiment. It is not a bound conditional on every realized schedule, nor a fixed-duration guarantee.
 
-Fix $`\kappa_0,q_0>0`$. The constants below are uniform for
+Fix $`\kappa_0,q_0\gt 0`$. The constants below are uniform for
 
 ```math
 0\lt \kappa\le\kappa_0,\qquad 0\lt h\le q_0.
@@ -131,7 +131,7 @@ R_N^{\rm Pois,*}(h)
  \ge\frac{1-3(\kappa_0+q_0)\mathcal I_N-\sqrt{2\mathcal I_N}}2.
 ```
 
-If the right-hand side is negative, the inequality is simply uninformative. Choosing $`c_\eta>0`$ sufficiently small proves the impossibility part. It applies to every collective measurement and to arbitrary receiver ancillas independent of the unknown source and path.
+If the right-hand side is negative, the inequality is simply uninformative. Choosing $`c_\eta\gt 0`$ sufficiently small proves the impossibility part. It applies to every collective measurement and to arbitrary receiver ancillas independent of the unknown source and path.
 
 ## 5. Attainment with independent gap–outcome pairs
 
@@ -186,7 +186,7 @@ Let $`h_*`$ be the unique positive solution of $`\mathcal I_N(h_*,\kappa)=1`$. I
  \sqrt{\frac{\kappa}{n\log(2+n\kappa)}}.
 ```
 
-Then, for every $`n\ge1`$ and $`\kappa>0`$,
+Then, for every $`n\ge1`$ and $`\kappa\gt 0`$,
 
 ```math
 \frac{\bar h_n}{5}\le h_*\le4\bar h_n.
@@ -198,7 +198,7 @@ Here is an explicit inversion check. Put $`x=n\kappa`$, $`L=\log(2+x)`$, and $`y
 \mathcal I_N=\frac{y^2}{x}\log\left(1+\frac xy\right).
 ```
 
-For $`0<x\le1`$, $`y\ge1`$, $`y\le1+1/\sqrt{\log2}`$, and $`\log(1+z)`$ lies between $`z/(1+z)`$ and $`z`$. These give a lower bound $`1/2`$ and an upper bound less than $`5`$. For $`x\ge1`$, $`y\le2\sqrt x`$, $`y^2/x\ge1/L`$, and
+For $`0\lt x\le1`$, $`y\ge1`$, $`y\le1+1/\sqrt{\log2}`$, and $`\log(1+z)`$ lies between $`z/(1+z)`$ and $`z`$. These give a lower bound $`1/2`$ and an upper bound less than $`5`$. For $`x\ge1`$, $`y\le2\sqrt x`$, $`y^2/x\ge1/L`$, and
 
 ```math
 \log(1+x/y)\ge\log(1+\sqrt x/2)\ge\tfrac14\log(2+x).
@@ -211,7 +211,7 @@ The last inequality is equivalent to $`(1+\sqrt x/2)^4\ge2+x`$, which follows by
 \log(1+x/y)\le L,\qquad L/x\le\log3.
 ```
 
-Thus $`1/4\le\mathcal I_N(\bar h_n,\kappa)\le5`$ for all $`x>0`$. For any factor $`a\ge1`$, concavity of the logarithm gives
+Thus $`1/4\le\mathcal I_N(\bar h_n,\kappa)\le5`$ for all $`x\gt 0`$. For any factor $`a\ge1`$, concavity of the logarithm gives
 
 ```math
 aJ(h,\kappa)\le J(ah,\kappa)\le a^2J(h,\kappa).

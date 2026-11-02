@@ -18,6 +18,7 @@ A successful run prints:
 ```text
 PASS verify_converse.py
 PASS verify_receiver.py
+PASS verify_joint.py
 All assertions passed; saved outputs were not modified.
 ```
 
@@ -29,7 +30,7 @@ To replace the recorded report deliberately, run:
 python verification/run_all.py --write
 ```
 
-The JSON records each result and SHA-256 digests of the three check/runner sources. Floating-point errors can differ slightly across numerical libraries and machines; the assertions use stated tolerances rather than requiring byte-identical numeric reports.
+The JSON records each result and SHA-256 digests of the check and runner sources. Floating-point errors can differ slightly across numerical libraries and machines; the assertions use stated tolerances rather than requiring byte-identical numeric reports.
 
 ## What is checked
 
@@ -46,8 +47,11 @@ The JSON records each result and SHA-256 digests of the three check/runner sourc
 | Informative pair test | An exact binomial calculation for 500 pairs, v=0.001 and h=0.05 gives type-I error about 0.000294 and type-II error about 0.000470 | Concrete finite illustration, not an optimized risk constant |
 | Poisson integrals | 15 resolvent integrals and 16 joint gap–outcome Hellinger integrals | [Poisson lower and upper bounds](../science/poisson-arrivals.md) |
 | Crossover and exact duration | 15 Poisson root inversions and eight equal-duration doublet/floor examples | [Uniform crossover](../science/poisson-arrivals.md#6-uniform-crossover-and-resolution-order) and [timing schedules](../science/timing-regimes.md) |
+| Joint relative-mode experiment | 100 quadrature cases check the three-point relative displacement, corrected second/fourth HG moments, variances, covariance and SWAP response, including zero jitter and zero separation | [Joint model](../science/joint-model.md) |
+| Joint converse reductions | 60 covariance matrices with gaps from 10⁻⁸ to 1 check diagonal extraction; 480 weighted-sum comparisons and nine independent collision-kernel integrals check the heterogeneous substitution | [Joint converse](../science/joint-converse.md) |
+| Joint receiver and crossovers | Two complete small-record enumerations check the weighted shape statistic; 45 exact-moment variance cases include separation much larger than the jitter bound; 48 doublet budget cases check the order reduction and calibration crossover | [Joint receiver](../science/joint-receiver.md) and [joint interpretation](../science/jitter-calibration-regimes.md) |
 
-The exact scripts are [verify_converse.py](verify_converse.py) and [verify_receiver.py](verify_receiver.py). The full observed values, rather than only the rounded table, are in [results.json](results.json).
+The exact scripts are [verify_converse.py](verify_converse.py), [verify_receiver.py](verify_receiver.py) and [verify_joint.py](verify_joint.py). The full observed values, rather than only the rounded table, are in [results.json](results.json). The joint check uses 96-point Gaussian quadrature and HG modes 0–179 for its probability comparisons, exact factorial moments for weighted variances, and higher-precision scalar arithmetic for small compensated collision divergences. It checks a finite variance envelope, rather than treating that envelope as a proof of the uniform bound. Its stationary point-calibration source does not share the signal Brownian path.
 
 The Gaussian fidelity checks retain 64 Fock coefficients and use 160-point Gauss–Hermite quadrature. They check the retained trace and compare the numerical root fidelity with the analytic expression. Small negative eigenvalues caused by floating-point roundoff are clipped when forming square roots. This is a numerical convention check on the listed examples, not a certified infinite-dimensional error bound. The trace-norm Taylor estimate and exact Gaussian formula provide the analytical justification.
 

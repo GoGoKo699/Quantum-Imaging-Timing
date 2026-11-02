@@ -129,3 +129,22 @@ The one-photon spatial state is a standard building block of incoherent imaging.
 That derivation does not automatically prove that an arbitrary moving-source optical field supplies the exact labeled-register state used here, uniformly in every timing limit. Finite emission duration can correlate spatial and temporal variables, and the centroid can move during a wavepacket. Thermal bunching, fluorescence intermittency, spectral diffusion and photon capture must be modeled if they affect the supplied state. The present result is exact for its stated register model; it is not a complete weak-field or finite-bandwidth imaging theorem.
 
 The same boundary applies to rotational diffusion, unequal source brightness, unknown diffusion, a spatially varying point-spread amplitude, finite field of view, and access to a trajectory monitor. Each changes either the state family, the side information, or the attaining measurement. The [model and results](model-and-theorem.md) gives the precise theorem assumptions.
+
+## 7. Relative-coordinate access for the joint frontier
+
+The [joint theorem](joint-model.md) keeps the Brownian register model and adds an independent Gaussian displacement to each signal photon. If its physical variance is $`\nu`$, write $`w=\nu/(2\sigma^2)`$ with supplied bound $`0\le w\le b`$. For a pair with Brownian gap variance $`v`$, its relative Gaussian displacement variance is $`w+v/2`$. Common-position cancellation leaves the independent jitter contribution $`w`$ intact.
+
+Its calibration source supplies exactly $`M`$ additional one-photon registers from a stabilized known-position point, with the same real Gaussian amplitude and unknown jitter variance. Calibration realizations are independent of the signal and the common trajectory. This is a distributional variance reference, not a moving fiducial or a measurement of instantaneous signal position. Both $`N`$ and $`M`$ are charged; photons or monitoring devices needed to stabilize an actual source belong in its physical implementation and are not inferred from the statistical register theorem.
+
+The general attaining joint receiver requires the spatial-coordinate unitary
+
+```math
+(x_1,x_2)\longmapsto
+\left(\frac{x_1+x_2}{\sqrt2},\frac{x_2-x_1}{\sqrt2}\right),
+```
+
+followed by discarding the sum mode and resolving the full HG index of the relative mode. This is an allowed two-register spatial POVM under the all-quantum-receiver model. It is a stronger supplied capability than measuring only SWAP symmetry. A balanced beam splitter and unresolved HOM port counts do not by themselves establish this coordinate operation or the required shape-sensitive mode measurement. A restricted optical architecture must provide that operation or derive a different attaining apparatus.
+
+The HG index counts transverse spatial oscillator excitation of the two-photon wavefunction after this coordinate description; it is not a larger number of detected photons. The general proof uses a factorial-moment statistic of an unbounded mode index. For [controlled close doublets](joint-receiver.md#5-four-outcome-close-doublet-receiver), the four categories HG0, HG1, HG2 and remainder suffice instead. That simplification is not asserted for arbitrary heterogeneous gaps.
+
+When the actual variance $`w`$ is known, SWAP parity is again sufficient in order for the known-jitter timing law. For unknown $`w`$, a single parity probability at identical gaps does not identify both separation and variance; the joint proof retains higher spatial shape information. Unlimited calibration can approach the known-jitter floor, but independent physical displacement remains even at perfect variance knowledge. The [crossover account](jitter-calibration-regimes.md#3-physical-jitter-remains-after-calibration) gives the resulting separation exponent.

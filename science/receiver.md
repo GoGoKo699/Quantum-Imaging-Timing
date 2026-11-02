@@ -10,7 +10,7 @@ v_i=\frac{D}{\sigma^2}(t_i-t_{i-1}),\qquad
 I_N(h;v)=\sum_{i=2}^{N}\frac{h^2}{v_i+h}.
 ```
 
-The Gaussian intensity point-spread function has physical variance $`\sigma^2`$; physical Brownian increments have variance $`2D\Delta t`$. The receiver has the timestamped spatial registers described in the [model](model-and-theorem.md). For the deterministic result, $`0<v_i\le V`$ and $`0<h\le q_0`$, with $`V,q_0`$ fixed. The actual alternative may be any $`q\ge h`$.
+The Gaussian intensity point-spread function has physical variance $`\sigma^2`$; physical Brownian increments have variance $`2D\Delta t`$. The receiver has the timestamped spatial registers described in the [model](model-and-theorem.md). For the deterministic result, $`0\lt v_i\le V`$ and $`0\lt h\le q_0`$, with $`V,q_0`$ fixed. The actual alternative may be any $`q\ge h`$.
 
 ## 1. Exact probability for a pair
 
@@ -95,7 +95,7 @@ H^2(\mathrm{Ber}(p),\mathrm{Ber}(r))
        +\frac{1}{(\sqrt{1-p}+\sqrt{1-r})^2}\right\}.
 ```
 
-The expression is interpreted by continuity if $`v=0`$. For $`0\le v\le V`$ and $`0<h\le q_0`$, set
+The expression is interpreted by continuity if $`v=0`$. For $`0\le v\le V`$ and $`0\lt h\le q_0`$, set
 
 ```math
 a=\frac{e^{-2q_0}}{2(1+V)^{3/2}},\qquad
@@ -202,7 +202,7 @@ The probability law and bound are uniform over every initial centroid $`m\in\mat
 
 ### The same test handles every larger separation
 
-The coefficient of each $`Y_i`$ in $`\ell_h`$ is positive, because $`p_{v_i}(h)>p_{v_i}(0)`$. Thus the rejection event is increasing in every bit. For any actual $`q\ge h`$, the independent Bernoulli variables with probabilities $`p_{v_i}(q)`$ stochastically dominate those with probabilities $`p_{v_i}(h)`$. The acceptance probability can only decrease. Therefore
+The coefficient of each $`Y_i`$ in $`\ell_h`$ is positive, because $`p_{v_i}(h)\gt p_{v_i}(0)`$. Thus the rejection event is increasing in every bit. For any actual $`q\ge h`$, the independent Bernoulli variables with probabilities $`p_{v_i}(q)`$ stochastically dominate those with probabilities $`p_{v_i}(h)`$. The acceptance probability can only decrease. Therefore
 
 ```math
 \sup_{m\in\mathbb R,\ q\ge h}\Pr_{q,m}(\text{accept null})

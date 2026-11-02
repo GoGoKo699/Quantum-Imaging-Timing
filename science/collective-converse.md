@@ -117,7 +117,7 @@ The position and momentum covariance blocks of $`G_C`$ are
 \mathrm{Cov}(X,P)=0.
 ```
 
-Choose a real orthogonal matrix diagonalizing $`C`$, with eigenvalues $`c_1,\ldots,c_N>0`$. The corresponding orthogonal coordinate transformation, applied to both positions and momenta, is a unitary on the spatial-register Hilbert space and leaves the product vacuum invariant. Hence the pair $`G_C,G_{C+qI}`$ is unitarily equivalent to
+Choose a real orthogonal matrix diagonalizing $`C`$, with eigenvalues $`c_1,\ldots,c_N\gt 0`$. The corresponding orthogonal coordinate transformation, applied to both positions and momenta, is a unitary on the spatial-register Hilbert space and leaves the product vacuum invariant. Hence the pair $`G_C,G_{C+qI}`$ is unitarily equivalent to
 
 ```math
 \bigotimes_{j=1}^{N}\rho(c_j),
@@ -225,7 +225,7 @@ Iterating from $`A=0`$ with $`w=b_i/\sqrt{u_i}`$ proves
 \end{aligned}
 ```
 
-The last scalar inequality holds for every $`0\le\|b_i\|^2\le2`$ and $`u_i,q>0`$.
+The last scalar inequality holds for every $`0\le\|b_i\|^2\le2`$ and $`u_i,q\gt 0`$.
 
 ## 5. Close the minimax bound
 
